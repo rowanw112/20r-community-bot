@@ -1,18 +1,15 @@
-import logging
-import time
-import discord
 import asyncio
+import logging
 import os
-import subprocess
-import shlex
-import git
-from git import Repo
-from pathlib import Path
-from discord.ext import commands
-from logging.handlers import TimedRotatingFileHandler
-
-import sys
 import pkgutil
+import sys
+import time
+from logging.handlers import TimedRotatingFileHandler
+from pathlib import Path
+
+import discord
+import git
+from discord.ext import commands
 
 __depth__ = 2
 
