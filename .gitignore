@@ -1,0 +1,8 @@
+token.json
+token.yml
+/quarantine/
+/venv/
+/__pycache__/
+/Configuration/bot.yml
+/Configuration/googleCalendar.json
+start.sh

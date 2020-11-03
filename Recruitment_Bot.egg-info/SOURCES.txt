@@ -1,0 +1,8 @@
+README.md
+Virtualize.py
+__init__.py
+setup.py
+Recruitment_Bot.egg-info/PKG-INFO
+Recruitment_Bot.egg-info/SOURCES.txt
+Recruitment_Bot.egg-info/dependency_links.txt
+Recruitment_Bot.egg-info/top_level.txt

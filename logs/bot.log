@@ -1,0 +1,339 @@
+[2020-10-29 21:10:16,328][MainThread][discord.client][231][WARNING] PyNaCl is not installed, voice will NOT be supported
+[2020-10-29 21:10:16,343][MainThread][root][93][INFO] StartUp loaded!
+[2020-10-29 21:10:16,345][MainThread][root][63][INFO] AmongUs loaded!
+[2020-10-29 21:10:16,409][MainThread][root][287][INFO] SteamAPI loaded!
+[2020-10-29 21:10:16,410][MainThread][root][71][INFO] JoinMessage loaded!
+[2020-10-29 21:10:16,411][MainThread][root][30][INFO] LeaveMessage loaded!
+[2020-10-29 21:10:16,412][MainThread][root][25][INFO] LeaveMessage loaded!
+[2020-10-29 21:10:16,417][MainThread][root][63][INFO] MemberMonth loaded!
+[2020-10-29 21:10:16,419][MainThread][root][168][INFO] PlanetSide2 loaded!
+[2020-10-29 21:10:16,420][MainThread][root][62][INFO] RawReactAdd loaded!
+[2020-10-29 21:10:16,421][MainThread][root][58][INFO] RawReactRemove loaded!
+[2020-10-29 21:10:16,422][MainThread][root][174][INFO] ReactRoles loaded!
+[2020-10-29 21:10:16,423][MainThread][root][215][INFO] Recruitment loaded!
+[2020-10-29 21:10:16,425][MainThread][root][136][INFO] StartUp loaded!
+[2020-10-29 21:10:16,425][MainThread][root][164][INFO] All cogs loaded!
+[2020-10-29 21:10:16,426][MainThread][discord.client][441][INFO] logging in using static token
+[2020-10-29 21:10:17,059][MainThread][discord.gateway][321][INFO] Shard ID 0 has sent the IDENTIFY payload.
+[2020-10-29 21:10:17,278][MainThread][discord.gateway][412][INFO] Shard ID 0 has connected to Gateway: ["gateway-prd-main-8ktk",{"micros":94174,"calls":["discord-sessions-prd-2-77",{"micros":90357,"calls":["start_session",{"micros":75645,"calls":["api-prd-main-fmq8",{"micros":71222,"calls":["get_user",{"micros":3984},"add_authorized_ip",{"micros":5411},"get_guilds",{"micros":5535},"coros_wait",{"micros":1}]}]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":1,"calls":[]}]}]}] (Session ID: cc63dfd9524c18af926afbaee8c51877).
+[2020-10-29 21:10:19,917][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:10:19,943][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:10:19,977][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:10:19,994][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:10:19,996][MainThread][discord.state][880][INFO] Processed a chunk for 59 members in guild ID 531243268256694313.
+[2020-10-29 21:10:20,839][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:10:21,720][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:10:22,392][MainThread][root][191][INFO] Bot online. Logged in as 
+Name: 20r Community Bot#5049 
+ID: (707388740846354443)
+[2020-10-29 21:10:22,392][MainThread][root][192][INFO] Currently have access to the following guilds: 20r Gaming (531243268256694313), 20R ESPORTS (748715502041563186)
+[2020-10-29 21:10:22,392][MainThread][root][194][INFO] Current command prefix "."
+[2020-10-29 21:10:22,650][MainThread][Bot.cogs.startup][97][INFO] planetside status channel has been updated
+[2020-10-29 21:10:23,182][MainThread][discord.ext.tasks][94][ERROR] Internal background task failed.
+Traceback (most recent call last):
+  File "C:\Users\Rowan\PycharmProjects\Gaming-Community-Bot\venv\lib\site-packages\discord\ext\tasks\__init__.py", line 73, in _loop
+    await self.coro(*args, **kwargs)
+  File "C:\Users\Rowan\PycharmProjects\Gaming-Community-Bot\Bot\cogs\startup.py", line 40, in loopserverembedstatus
+    await message.edit(embed=target.Embed)
+  File "C:\Users\Rowan\PycharmProjects\Gaming-Community-Bot\Bot\cogs\battlemetric.py", line 234, in Embed
+    icon_url=self.gameLogo)
+  File "C:\Users\Rowan\PycharmProjects\Gaming-Community-Bot\Bot\cogs\battlemetric.py", line 216, in gameLogo
+    if self.name == "mordhau":
+AttributeError: 'RisingStorm' object has no attribute 'name'
+[2020-10-29 21:10:23,207][MainThread][Bot.cogs.startup][62][INFO] {'squad': [<Bot.cogs.battlemetric.Squad object at 0x000001D3D4953880>, 'Squad'], 'mordhau': [<Bot.cogs.battlemetric.Mordhau object at 0x000001D3D5BEC580>, 'Mordhau'], 'risingstorm': [<Bot.cogs.battlemetric.RisingStorm object at 0x000001D3D5BF5D90>, 'RisingStorm'], 'btw': [<Bot.cogs.battlemetric.BTW object at 0x000001D3D5B13CD0>, 'BTW']} voice has been updated
+[2020-10-29 21:11:03,364][MainThread][discord.client][231][WARNING] PyNaCl is not installed, voice will NOT be supported
+[2020-10-29 21:11:03,374][MainThread][root][93][INFO] StartUp loaded!
+[2020-10-29 21:11:03,376][MainThread][root][63][INFO] AmongUs loaded!
+[2020-10-29 21:11:03,431][MainThread][root][287][INFO] SteamAPI loaded!
+[2020-10-29 21:11:03,432][MainThread][root][71][INFO] JoinMessage loaded!
+[2020-10-29 21:11:03,433][MainThread][root][30][INFO] LeaveMessage loaded!
+[2020-10-29 21:11:03,434][MainThread][root][25][INFO] LeaveMessage loaded!
+[2020-10-29 21:11:03,438][MainThread][root][63][INFO] MemberMonth loaded!
+[2020-10-29 21:11:03,439][MainThread][root][168][INFO] PlanetSide2 loaded!
+[2020-10-29 21:11:03,440][MainThread][root][62][INFO] RawReactAdd loaded!
+[2020-10-29 21:11:03,440][MainThread][root][58][INFO] RawReactRemove loaded!
+[2020-10-29 21:11:03,441][MainThread][root][174][INFO] ReactRoles loaded!
+[2020-10-29 21:11:03,442][MainThread][root][215][INFO] Recruitment loaded!
+[2020-10-29 21:11:03,443][MainThread][root][136][INFO] StartUp loaded!
+[2020-10-29 21:11:03,443][MainThread][root][164][INFO] All cogs loaded!
+[2020-10-29 21:11:03,444][MainThread][discord.client][441][INFO] logging in using static token
+[2020-10-29 21:11:04,048][MainThread][discord.gateway][321][INFO] Shard ID 0 has sent the IDENTIFY payload.
+[2020-10-29 21:11:04,347][MainThread][discord.gateway][412][INFO] Shard ID 0 has connected to Gateway: ["gateway-prd-main-rhhv",{"micros":149643,"calls":["discord-sessions-prd-2-122",{"micros":148109,"calls":["start_session",{"micros":128526,"calls":["api-prd-main-gctz",{"micros":121929,"calls":["get_user",{"micros":3545},"add_authorized_ip",{"micros":25081},"get_guilds",{"micros":3478},"coros_wait",{"micros":2}]}]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":2613,"calls":[]}]}]}] (Session ID: a849f60f62fb46092fdfa75d6fc6f2a2).
+[2020-10-29 21:11:07,000][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:11:07,035][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:11:07,059][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:11:07,093][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:11:07,095][MainThread][discord.state][880][INFO] Processed a chunk for 59 members in guild ID 531243268256694313.
+[2020-10-29 21:11:07,859][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:11:08,802][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:11:09,551][MainThread][root][191][INFO] Bot online. Logged in as 
+Name: 20r Community Bot#5049 
+ID: (707388740846354443)
+[2020-10-29 21:11:09,551][MainThread][root][192][INFO] Currently have access to the following guilds: 20r Gaming (531243268256694313), 20R ESPORTS (748715502041563186)
+[2020-10-29 21:11:09,551][MainThread][root][194][INFO] Current command prefix "."
+[2020-10-29 21:11:09,837][MainThread][Bot.cogs.startup][97][INFO] planetside status channel has been updated
+[2020-10-29 21:11:10,309][MainThread][Bot.cogs.startup][62][INFO] {'squad': [<Bot.cogs.battlemetric.Squad object at 0x00000278CECF38E0>, 'Squad'], 'mordhau': [<Bot.cogs.battlemetric.Mordhau object at 0x00000278D0D89C40>, 'Mordhau'], 'risingstorm': [<Bot.cogs.battlemetric.RisingStorm object at 0x00000278D0D95250>, 'RisingStorm'], 'btw': [<Bot.cogs.battlemetric.BTW object at 0x00000278CFE44BE0>, 'BTW']} voice has been updated
+[2020-10-29 21:11:10,376][MainThread][discord.ext.tasks][94][ERROR] Internal background task failed.
+Traceback (most recent call last):
+  File "C:\Users\Rowan\PycharmProjects\Gaming-Community-Bot\venv\lib\site-packages\discord\ext\tasks\__init__.py", line 73, in _loop
+    await self.coro(*args, **kwargs)
+  File "C:\Users\Rowan\PycharmProjects\Gaming-Community-Bot\Bot\cogs\startup.py", line 40, in loopserverembedstatus
+    await message.edit(embed=target.Embed)
+  File "C:\Users\Rowan\PycharmProjects\Gaming-Community-Bot\Bot\cogs\battlemetric.py", line 234, in Embed
+    icon_url=self.gameLogo)
+  File "C:\Users\Rowan\PycharmProjects\Gaming-Community-Bot\Bot\cogs\battlemetric.py", line 216, in gameLogo
+    if self.name == "mordhau":
+AttributeError: 'RisingStorm' object has no attribute 'name'
+[2020-10-29 21:12:26,820][MainThread][discord.client][231][WARNING] PyNaCl is not installed, voice will NOT be supported
+[2020-10-29 21:12:26,830][MainThread][root][93][INFO] StartUp loaded!
+[2020-10-29 21:12:26,832][MainThread][root][63][INFO] AmongUs loaded!
+[2020-10-29 21:12:26,897][MainThread][root][290][INFO] SteamAPI loaded!
+[2020-10-29 21:12:26,899][MainThread][root][71][INFO] JoinMessage loaded!
+[2020-10-29 21:12:26,900][MainThread][root][30][INFO] LeaveMessage loaded!
+[2020-10-29 21:12:26,902][MainThread][root][25][INFO] LeaveMessage loaded!
+[2020-10-29 21:12:26,907][MainThread][root][63][INFO] MemberMonth loaded!
+[2020-10-29 21:12:26,910][MainThread][root][168][INFO] PlanetSide2 loaded!
+[2020-10-29 21:12:26,911][MainThread][root][62][INFO] RawReactAdd loaded!
+[2020-10-29 21:12:26,912][MainThread][root][58][INFO] RawReactRemove loaded!
+[2020-10-29 21:12:26,915][MainThread][root][174][INFO] ReactRoles loaded!
+[2020-10-29 21:12:26,918][MainThread][root][215][INFO] Recruitment loaded!
+[2020-10-29 21:12:26,919][MainThread][root][136][INFO] StartUp loaded!
+[2020-10-29 21:12:26,919][MainThread][root][164][INFO] All cogs loaded!
+[2020-10-29 21:12:26,920][MainThread][discord.client][441][INFO] logging in using static token
+[2020-10-29 21:12:27,537][MainThread][discord.gateway][321][INFO] Shard ID 0 has sent the IDENTIFY payload.
+[2020-10-29 21:12:27,802][MainThread][discord.gateway][412][INFO] Shard ID 0 has connected to Gateway: ["gateway-prd-main-nw97",{"micros":127973,"calls":["discord-sessions-prd-2-67",{"micros":126903,"calls":["start_session",{"micros":102423,"calls":["api-prd-main-61b1",{"micros":93309,"calls":["get_user",{"micros":9213},"add_authorized_ip",{"micros":2066},"get_guilds",{"micros":30905},"coros_wait",{"micros":0}]}]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":6752,"calls":[]}]}]}] (Session ID: ec000ef5d584a54d940d15a610287fef).
+[2020-10-29 21:12:30,426][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:12:30,459][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:12:30,482][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:12:30,507][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:12:30,509][MainThread][discord.state][880][INFO] Processed a chunk for 59 members in guild ID 531243268256694313.
+[2020-10-29 21:12:31,221][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:12:32,073][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:12:32,675][MainThread][root][191][INFO] Bot online. Logged in as 
+Name: 20r Community Bot#5049 
+ID: (707388740846354443)
+[2020-10-29 21:12:32,675][MainThread][root][192][INFO] Currently have access to the following guilds: 20r Gaming (531243268256694313), 20R ESPORTS (748715502041563186)
+[2020-10-29 21:12:32,676][MainThread][root][194][INFO] Current command prefix "."
+[2020-10-29 21:12:32,916][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 469.75 seconds. Handled under the bucket "753570953237364816:None:/channels/{channel_id}"
+[2020-10-29 21:12:32,940][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 377.84 seconds. Handled under the bucket "753780062599381102:None:/channels/{channel_id}"
+[2020-10-29 21:12:33,505][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 66.10 seconds. Handled under the bucket "764223239407796244:None:/channels/{channel_id}"
+[2020-10-29 21:12:34,367][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:12:36,315][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:12:40,676][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:12:46,281][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:13:08,728][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 9.38 seconds. Handled under the bucket "None:531243268256694313:/guilds/{guild_id}/members/{user_id}/roles/{role_id}"
+[2020-10-29 21:13:10,495][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:13:18,946][MainThread][root][64][ERROR] Got exception on main handler
+Traceback (most recent call last):
+  File "C:\Users\Rowan\PycharmProjects\Gaming-Community-Bot\Bot\cogs\join_message.py", line 51, in on_member_join
+    await member.add_roles(member.guild.get_role(game), atomic=True)
+  File "C:\Users\Rowan\PycharmProjects\Gaming-Community-Bot\venv\lib\site-packages\discord\member.py", line 641, in add_roles
+    await req(guild_id, user_id, role.id, reason=reason)
+AttributeError: 'NoneType' object has no attribute 'id'
+[2020-10-29 21:14:31,050][MainThread][discord.client][231][WARNING] PyNaCl is not installed, voice will NOT be supported
+[2020-10-29 21:14:31,062][MainThread][root][93][INFO] StartUp loaded!
+[2020-10-29 21:14:31,063][MainThread][root][63][INFO] AmongUs loaded!
+[2020-10-29 21:14:31,111][MainThread][root][283][INFO] SteamAPI loaded!
+[2020-10-29 21:14:31,111][MainThread][root][71][INFO] JoinMessage loaded!
+[2020-10-29 21:14:31,112][MainThread][root][30][INFO] LeaveMessage loaded!
+[2020-10-29 21:14:31,112][MainThread][root][25][INFO] LeaveMessage loaded!
+[2020-10-29 21:14:31,115][MainThread][root][63][INFO] MemberMonth loaded!
+[2020-10-29 21:14:31,116][MainThread][root][168][INFO] PlanetSide2 loaded!
+[2020-10-29 21:14:31,117][MainThread][root][62][INFO] RawReactAdd loaded!
+[2020-10-29 21:14:31,118][MainThread][root][58][INFO] RawReactRemove loaded!
+[2020-10-29 21:14:31,118][MainThread][root][174][INFO] ReactRoles loaded!
+[2020-10-29 21:14:31,119][MainThread][root][215][INFO] Recruitment loaded!
+[2020-10-29 21:14:31,120][MainThread][root][136][INFO] StartUp loaded!
+[2020-10-29 21:14:31,120][MainThread][root][164][INFO] All cogs loaded!
+[2020-10-29 21:14:31,120][MainThread][discord.client][441][INFO] logging in using static token
+[2020-10-29 21:14:31,720][MainThread][discord.gateway][321][INFO] Shard ID 0 has sent the IDENTIFY payload.
+[2020-10-29 21:14:31,917][MainThread][discord.gateway][412][INFO] Shard ID 0 has connected to Gateway: ["gateway-prd-main-m7ps",{"micros":66082,"calls":["discord-sessions-prd-2-77",{"micros":64321,"calls":["start_session",{"micros":53067,"calls":["api-prd-main-rnxq",{"micros":50010,"calls":["get_user",{"micros":2213},"add_authorized_ip",{"micros":1631},"get_guilds",{"micros":1552},"coros_wait",{"micros":1}]}]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":2656,"calls":[]}]}]}] (Session ID: ba894da7d666ffedca2b0e00c03c64b3).
+[2020-10-29 21:14:34,590][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:14:34,619][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:14:34,649][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:14:34,670][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:14:34,672][MainThread][discord.state][880][INFO] Processed a chunk for 59 members in guild ID 531243268256694313.
+[2020-10-29 21:14:35,387][MainThread][Bot.cogs.battlemetric][141][INFO] 'official'
+[2020-10-29 21:14:36,395][MainThread][Bot.cogs.battlemetric][141][INFO] 'official'
+[2020-10-29 21:14:37,020][MainThread][root][191][INFO] Bot online. Logged in as 
+Name: 20r Community Bot#5049 
+ID: (707388740846354443)
+[2020-10-29 21:14:37,021][MainThread][root][192][INFO] Currently have access to the following guilds: 20r Gaming (531243268256694313), 20R ESPORTS (748715502041563186)
+[2020-10-29 21:14:37,021][MainThread][root][194][INFO] Current command prefix "."
+[2020-10-29 21:14:37,897][MainThread][Bot.cogs.battlemetric][141][INFO] 'official'
+[2020-10-29 21:14:38,111][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 345.38 seconds. Handled under the bucket "753570953237364816:None:/channels/{channel_id}"
+[2020-10-29 21:14:38,111][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 253.47 seconds. Handled under the bucket "753780062599381102:None:/channels/{channel_id}"
+[2020-10-29 21:14:43,185][MainThread][Bot.cogs.battlemetric][141][INFO] 'official'
+[2020-10-29 21:14:50,002][MainThread][Bot.cogs.battlemetric][141][INFO] 'official'
+[2020-10-29 21:15:04,564][MainThread][Bot.cogs.battlemetric][141][INFO] 'official'
+[2020-10-29 21:15:18,653][MainThread][Bot.cogs.battlemetric][141][INFO] 'official'
+[2020-10-29 21:15:23,928][MainThread][Bot.cogs.battlemetric][141][INFO] 'official'
+[2020-10-29 21:15:37,828][MainThread][discord.client][231][WARNING] PyNaCl is not installed, voice will NOT be supported
+[2020-10-29 21:15:37,851][MainThread][root][93][INFO] StartUp loaded!
+[2020-10-29 21:15:37,853][MainThread][root][63][INFO] AmongUs loaded!
+[2020-10-29 21:15:37,970][MainThread][root][290][INFO] SteamAPI loaded!
+[2020-10-29 21:15:37,974][MainThread][root][71][INFO] JoinMessage loaded!
+[2020-10-29 21:15:37,977][MainThread][root][30][INFO] LeaveMessage loaded!
+[2020-10-29 21:15:37,979][MainThread][root][25][INFO] LeaveMessage loaded!
+[2020-10-29 21:15:37,983][MainThread][root][63][INFO] MemberMonth loaded!
+[2020-10-29 21:15:37,985][MainThread][root][168][INFO] PlanetSide2 loaded!
+[2020-10-29 21:15:37,987][MainThread][root][62][INFO] RawReactAdd loaded!
+[2020-10-29 21:15:37,988][MainThread][root][58][INFO] RawReactRemove loaded!
+[2020-10-29 21:15:37,989][MainThread][root][174][INFO] ReactRoles loaded!
+[2020-10-29 21:15:37,990][MainThread][root][215][INFO] Recruitment loaded!
+[2020-10-29 21:15:37,991][MainThread][root][136][INFO] StartUp loaded!
+[2020-10-29 21:15:37,992][MainThread][root][164][INFO] All cogs loaded!
+[2020-10-29 21:15:37,992][MainThread][discord.client][441][INFO] logging in using static token
+[2020-10-29 21:15:38,583][MainThread][discord.gateway][321][INFO] Shard ID 0 has sent the IDENTIFY payload.
+[2020-10-29 21:15:38,804][MainThread][discord.gateway][412][INFO] Shard ID 0 has connected to Gateway: ["gateway-prd-main-mfdt",{"micros":92425,"calls":["discord-sessions-prd-2-108",{"micros":91017,"calls":["start_session",{"micros":85498,"calls":["api-prd-main-5w10",{"micros":83124,"calls":["get_user",{"micros":11264},"add_authorized_ip",{"micros":2719},"get_guilds",{"micros":34457},"coros_wait",{"micros":0}]}]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":0,"calls":[]}]}]}] (Session ID: b41d02b452f56d7fcfe494c75cc882c8).
+[2020-10-29 21:15:41,508][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:15:41,540][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:15:41,560][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:15:41,588][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:15:41,590][MainThread][discord.state][880][INFO] Processed a chunk for 59 members in guild ID 531243268256694313.
+[2020-10-29 21:15:42,288][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:15:43,185][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:15:43,773][MainThread][root][191][INFO] Bot online. Logged in as 
+Name: 20r Community Bot#5049 
+ID: (707388740846354443)
+[2020-10-29 21:15:43,773][MainThread][root][192][INFO] Currently have access to the following guilds: 20r Gaming (531243268256694313), 20R ESPORTS (748715502041563186)
+[2020-10-29 21:15:43,773][MainThread][root][194][INFO] Current command prefix "."
+[2020-10-29 21:15:44,012][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 278.65 seconds. Handled under the bucket "753570953237364816:None:/channels/{channel_id}"
+[2020-10-29 21:15:44,056][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 186.75 seconds. Handled under the bucket "753780062599381102:None:/channels/{channel_id}"
+[2020-10-29 21:15:48,241][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:15:53,149][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:15:57,293][MainThread][discord.client][231][WARNING] PyNaCl is not installed, voice will NOT be supported
+[2020-10-29 21:15:57,302][MainThread][root][93][INFO] StartUp loaded!
+[2020-10-29 21:15:57,303][MainThread][root][63][INFO] AmongUs loaded!
+[2020-10-29 21:15:57,392][MainThread][root][290][INFO] SteamAPI loaded!
+[2020-10-29 21:15:57,393][MainThread][root][71][INFO] JoinMessage loaded!
+[2020-10-29 21:15:57,394][MainThread][root][30][INFO] LeaveMessage loaded!
+[2020-10-29 21:15:57,395][MainThread][root][25][INFO] LeaveMessage loaded!
+[2020-10-29 21:15:57,398][MainThread][root][63][INFO] MemberMonth loaded!
+[2020-10-29 21:15:57,400][MainThread][root][168][INFO] PlanetSide2 loaded!
+[2020-10-29 21:15:57,409][MainThread][root][62][INFO] RawReactAdd loaded!
+[2020-10-29 21:15:57,411][MainThread][root][58][INFO] RawReactRemove loaded!
+[2020-10-29 21:15:57,412][MainThread][root][174][INFO] ReactRoles loaded!
+[2020-10-29 21:15:57,414][MainThread][root][215][INFO] Recruitment loaded!
+[2020-10-29 21:15:57,415][MainThread][root][136][INFO] StartUp loaded!
+[2020-10-29 21:15:57,415][MainThread][root][164][INFO] All cogs loaded!
+[2020-10-29 21:15:57,416][MainThread][discord.client][441][INFO] logging in using static token
+[2020-10-29 21:15:58,022][MainThread][discord.gateway][321][INFO] Shard ID 0 has sent the IDENTIFY payload.
+[2020-10-29 21:15:58,223][MainThread][discord.gateway][412][INFO] Shard ID 0 has connected to Gateway: ["gateway-prd-main-tq77",{"micros":57853,"calls":["discord-sessions-prd-2-32",{"micros":55298,"calls":["start_session",{"micros":36051,"calls":["api-prd-main-3b1l",{"micros":33237,"calls":["get_user",{"micros":2255},"add_authorized_ip",{"micros":1624},"get_guilds",{"micros":1844},"coros_wait",{"micros":1}]}]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":5684,"calls":[]}]}]}] (Session ID: 5fba55de6f1d0a947d2884d118ac0097).
+[2020-10-29 21:16:00,877][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:16:00,894][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:16:00,919][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:16:00,946][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:16:00,949][MainThread][discord.state][880][INFO] Processed a chunk for 59 members in guild ID 531243268256694313.
+[2020-10-29 21:16:01,871][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:16:02,849][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:16:03,500][MainThread][root][191][INFO] Bot online. Logged in as 
+Name: 20r Community Bot#5049 
+ID: (707388740846354443)
+[2020-10-29 21:16:03,500][MainThread][root][192][INFO] Currently have access to the following guilds: 20r Gaming (531243268256694313), 20R ESPORTS (748715502041563186)
+[2020-10-29 21:16:03,500][MainThread][root][194][INFO] Current command prefix "."
+[2020-10-29 21:16:03,735][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 167.03 seconds. Handled under the bucket "753780062599381102:None:/channels/{channel_id}"
+[2020-10-29 21:16:03,767][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 258.91 seconds. Handled under the bucket "753570953237364816:None:/channels/{channel_id}"
+[2020-10-29 21:16:04,838][MainThread][Bot.cogs.startup][41][INFO] {'squad': [<Bot.cogs.battlemetric.Squad object at 0x000001F3E5BF1130>, 'Squad'], 'mordhau': [<Bot.cogs.battlemetric.Mordhau object at 0x000001F3E5B00DC0>, 'Mordhau'], 'risingstorm': [<Bot.cogs.battlemetric.RisingStorm object at 0x000001F3E5A66DF0>, 'RisingStorm'], 'btw': [<Bot.cogs.battlemetric.BTW object at 0x000001F3E5ACF640>, 'BTW']} embed has been updated
+[2020-10-29 21:16:52,507][MainThread][discord.client][231][WARNING] PyNaCl is not installed, voice will NOT be supported
+[2020-10-29 21:16:52,526][MainThread][root][93][INFO] StartUp loaded!
+[2020-10-29 21:16:52,528][MainThread][root][63][INFO] AmongUs loaded!
+[2020-10-29 21:16:52,623][MainThread][root][290][INFO] SteamAPI loaded!
+[2020-10-29 21:16:52,625][MainThread][root][71][INFO] JoinMessage loaded!
+[2020-10-29 21:16:52,626][MainThread][root][30][INFO] LeaveMessage loaded!
+[2020-10-29 21:16:52,628][MainThread][root][25][INFO] LeaveMessage loaded!
+[2020-10-29 21:16:52,632][MainThread][root][63][INFO] MemberMonth loaded!
+[2020-10-29 21:16:52,635][MainThread][root][168][INFO] PlanetSide2 loaded!
+[2020-10-29 21:16:52,636][MainThread][root][62][INFO] RawReactAdd loaded!
+[2020-10-29 21:16:52,638][MainThread][root][58][INFO] RawReactRemove loaded!
+[2020-10-29 21:16:52,644][MainThread][root][174][INFO] ReactRoles loaded!
+[2020-10-29 21:16:52,646][MainThread][root][215][INFO] Recruitment loaded!
+[2020-10-29 21:16:52,647][MainThread][root][136][INFO] StartUp loaded!
+[2020-10-29 21:16:52,647][MainThread][root][164][INFO] All cogs loaded!
+[2020-10-29 21:16:52,647][MainThread][discord.client][441][INFO] logging in using static token
+[2020-10-29 21:16:53,274][MainThread][discord.gateway][321][INFO] Shard ID 0 has sent the IDENTIFY payload.
+[2020-10-29 21:16:53,476][MainThread][discord.gateway][412][INFO] Shard ID 0 has connected to Gateway: ["gateway-prd-main-wrgj",{"micros":53044,"calls":["discord-sessions-prd-2-75",{"micros":49187,"calls":["start_session",{"micros":39358,"calls":["api-prd-main-1g0k",{"micros":36778,"calls":["get_user",{"micros":2339},"add_authorized_ip",{"micros":2192},"get_guilds",{"micros":1759},"coros_wait",{"micros":1}]}]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":0,"calls":[]}]}]}] (Session ID: ec1050ab85fca42f4b24e531fa3c9f40).
+[2020-10-29 21:16:56,313][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:16:56,344][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:16:56,372][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:16:56,397][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:16:56,399][MainThread][discord.state][880][INFO] Processed a chunk for 59 members in guild ID 531243268256694313.
+[2020-10-29 21:16:57,252][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:16:58,221][MainThread][Bot.cogs.battlemetric][148][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:16:58,805][MainThread][root][191][INFO] Bot online. Logged in as 
+Name: 20r Community Bot#5049 
+ID: (707388740846354443)
+[2020-10-29 21:16:58,805][MainThread][root][192][INFO] Currently have access to the following guilds: 20r Gaming (531243268256694313), 20R ESPORTS (748715502041563186)
+[2020-10-29 21:16:58,805][MainThread][root][194][INFO] Current command prefix "."
+[2020-10-29 21:16:59,040][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 203.62 seconds. Handled under the bucket "753570953237364816:None:/channels/{channel_id}"
+[2020-10-29 21:16:59,149][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 111.62 seconds. Handled under the bucket "753780062599381102:None:/channels/{channel_id}"
+[2020-10-29 21:16:59,243][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 400.40 seconds. Handled under the bucket "764223239407796244:None:/channels/{channel_id}"
+[2020-10-29 21:17:00,025][MainThread][Bot.cogs.startup][41][INFO] {'squad': [<Bot.cogs.battlemetric.Squad object at 0x000001337ED82E50>, 'Squad'], 'mordhau': [<Bot.cogs.battlemetric.Mordhau object at 0x000001337EC789D0>, 'Mordhau'], 'risingstorm': [<Bot.cogs.battlemetric.RisingStorm object at 0x000001337EC21040>, 'RisingStorm'], 'btw': [<Bot.cogs.battlemetric.BTW object at 0x000001337EC34520>, 'BTW']} embed has been updated
+[2020-10-29 21:18:19,538][MainThread][discord.client][231][WARNING] PyNaCl is not installed, voice will NOT be supported
+[2020-10-29 21:18:19,552][MainThread][root][93][INFO] StartUp loaded!
+[2020-10-29 21:18:19,553][MainThread][root][63][INFO] AmongUs loaded!
+[2020-10-29 21:18:19,606][MainThread][root][291][INFO] SteamAPI loaded!
+[2020-10-29 21:18:19,607][MainThread][root][71][INFO] JoinMessage loaded!
+[2020-10-29 21:18:19,607][MainThread][root][30][INFO] LeaveMessage loaded!
+[2020-10-29 21:18:19,608][MainThread][root][25][INFO] LeaveMessage loaded!
+[2020-10-29 21:18:19,611][MainThread][root][63][INFO] MemberMonth loaded!
+[2020-10-29 21:18:19,612][MainThread][root][168][INFO] PlanetSide2 loaded!
+[2020-10-29 21:18:19,613][MainThread][root][62][INFO] RawReactAdd loaded!
+[2020-10-29 21:18:19,614][MainThread][root][58][INFO] RawReactRemove loaded!
+[2020-10-29 21:18:19,615][MainThread][root][174][INFO] ReactRoles loaded!
+[2020-10-29 21:18:19,616][MainThread][root][215][INFO] Recruitment loaded!
+[2020-10-29 21:18:19,616][MainThread][root][136][INFO] StartUp loaded!
+[2020-10-29 21:18:19,616][MainThread][root][164][INFO] All cogs loaded!
+[2020-10-29 21:18:19,617][MainThread][discord.client][441][INFO] logging in using static token
+[2020-10-29 21:18:20,367][MainThread][discord.gateway][321][INFO] Shard ID 0 has sent the IDENTIFY payload.
+[2020-10-29 21:18:20,560][MainThread][discord.gateway][412][INFO] Shard ID 0 has connected to Gateway: ["gateway-prd-main-h4tw",{"micros":58106,"calls":["discord-sessions-prd-2-124",{"micros":42250,"calls":["start_session",{"micros":33765,"calls":["api-prd-main-825b",{"micros":30980,"calls":["get_user",{"micros":2223},"add_authorized_ip",{"micros":1533},"get_guilds",{"micros":1886},"coros_wait",{"micros":1}]}]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":3408,"calls":[]}]}]}] (Session ID: b913a5f3a1dcbdde5e49559c9a68dc5e).
+[2020-10-29 21:18:23,187][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:18:23,217][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:18:23,242][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:18:23,273][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:18:23,275][MainThread][discord.state][880][INFO] Processed a chunk for 59 members in guild ID 531243268256694313.
+[2020-10-29 21:18:23,952][MainThread][Bot.cogs.battlemetric][149][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:18:25,381][MainThread][Bot.cogs.battlemetric][149][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:18:26,013][MainThread][root][191][INFO] Bot online. Logged in as 
+Name: 20r Community Bot#5049 
+ID: (707388740846354443)
+[2020-10-29 21:18:26,013][MainThread][root][192][INFO] Currently have access to the following guilds: 20r Gaming (531243268256694313), 20R ESPORTS (748715502041563186)
+[2020-10-29 21:18:26,013][MainThread][root][194][INFO] Current command prefix "."
+[2020-10-29 21:18:26,259][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 24.51 seconds. Handled under the bucket "753780062599381102:None:/channels/{channel_id}"
+[2020-10-29 21:18:26,269][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 116.39 seconds. Handled under the bucket "753570953237364816:None:/channels/{channel_id}"
+[2020-10-29 21:18:26,394][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 313.25 seconds. Handled under the bucket "764223239407796244:None:/channels/{channel_id}"
+[2020-10-29 21:18:27,355][MainThread][Bot.cogs.startup][41][INFO] {'squad': [<Bot.cogs.battlemetric.Squad object at 0x0000027FCAE846A0>, 'Squad'], 'mordhau': [<Bot.cogs.battlemetric.Mordhau object at 0x0000027FCAD94430>, 'Mordhau'], 'risingstorm': [<Bot.cogs.battlemetric.RisingStorm object at 0x0000027FCAD11EE0>, 'RisingStorm'], 'btw': [<Bot.cogs.battlemetric.BTW object at 0x0000027FCAD405B0>, 'BTW']} embed has been updated
+[2020-10-29 21:21:10,879][MainThread][discord.client][231][WARNING] PyNaCl is not installed, voice will NOT be supported
+[2020-10-29 21:21:10,886][MainThread][root][93][INFO] StartUp loaded!
+[2020-10-29 21:21:10,888][MainThread][root][63][INFO] AmongUs loaded!
+[2020-10-29 21:21:10,935][MainThread][root][286][INFO] SteamAPI loaded!
+[2020-10-29 21:21:10,936][MainThread][root][71][INFO] JoinMessage loaded!
+[2020-10-29 21:21:10,936][MainThread][root][30][INFO] LeaveMessage loaded!
+[2020-10-29 21:21:10,937][MainThread][root][25][INFO] LeaveMessage loaded!
+[2020-10-29 21:21:10,940][MainThread][root][63][INFO] MemberMonth loaded!
+[2020-10-29 21:21:10,940][MainThread][root][168][INFO] PlanetSide2 loaded!
+[2020-10-29 21:21:10,941][MainThread][root][62][INFO] RawReactAdd loaded!
+[2020-10-29 21:21:10,942][MainThread][root][58][INFO] RawReactRemove loaded!
+[2020-10-29 21:21:10,942][MainThread][root][174][INFO] ReactRoles loaded!
+[2020-10-29 21:21:10,943][MainThread][root][215][INFO] Recruitment loaded!
+[2020-10-29 21:21:10,944][MainThread][root][136][INFO] StartUp loaded!
+[2020-10-29 21:21:10,944][MainThread][root][164][INFO] All cogs loaded!
+[2020-10-29 21:21:10,944][MainThread][discord.client][441][INFO] logging in using static token
+[2020-10-29 21:21:11,615][MainThread][discord.gateway][321][INFO] Shard ID 0 has sent the IDENTIFY payload.
+[2020-10-29 21:21:11,813][MainThread][discord.gateway][412][INFO] Shard ID 0 has connected to Gateway: ["gateway-prd-main-f7nd",{"micros":69392,"calls":["discord-sessions-prd-2-31",{"micros":67054,"calls":["start_session",{"micros":55066,"calls":["api-prd-main-9tmw",{"micros":47282,"calls":["get_user",{"micros":4579},"add_authorized_ip",{"micros":3958},"get_guilds",{"micros":1972},"coros_wait",{"micros":1}]}]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":4002,"calls":[]}]}]}] (Session ID: 90bf4372b37be7e68529133a71497f2a).
+[2020-10-29 21:21:14,466][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:21:14,543][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:21:14,561][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:21:14,582][MainThread][discord.state][880][INFO] Processed a chunk for 1000 members in guild ID 531243268256694313.
+[2020-10-29 21:21:14,585][MainThread][discord.state][880][INFO] Processed a chunk for 59 members in guild ID 531243268256694313.
+[2020-10-29 21:21:15,267][MainThread][Bot.cogs.battlemetric][144][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:21:16,123][MainThread][Bot.cogs.battlemetric][144][INFO] 'RisingStorm' object has no attribute 'serverLicensed'
+[2020-10-29 21:21:16,720][MainThread][root][191][INFO] Bot online. Logged in as 
+Name: 20r Community Bot#5049 
+ID: (707388740846354443)
+[2020-10-29 21:21:16,720][MainThread][root][192][INFO] Currently have access to the following guilds: 20r Gaming (531243268256694313), 20R ESPORTS (748715502041563186)
+[2020-10-29 21:21:16,720][MainThread][root][194][INFO] Current command prefix "."
+[2020-10-29 21:21:16,984][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 453.92 seconds. Handled under the bucket "753780062599381102:None:/channels/{channel_id}"
+[2020-10-29 21:21:17,176][MainThread][discord.http][195][WARNING] We are being rate limited. Retrying in 142.47 seconds. Handled under the bucket "764223239407796244:None:/channels/{channel_id}"
+[2020-10-29 21:21:17,609][MainThread][Bot.cogs.startup][62][INFO] {'squad': [<Bot.cogs.battlemetric.Squad object at 0x0000017BB1363910>, 'Squad'], 'mordhau': [<Bot.cogs.battlemetric.Mordhau object at 0x0000017BB2962DF0>, 'Mordhau'], 'risingstorm': [<Bot.cogs.battlemetric.RisingStorm object at 0x0000017BB2C034F0>, 'RisingStorm'], 'btw': [<Bot.cogs.battlemetric.BTW object at 0x0000017BB29087F0>, 'BTW']} voice has been updated
+[2020-10-29 21:21:18,162][MainThread][Bot.cogs.startup][41][INFO] {'squad': [<Bot.cogs.battlemetric.Squad object at 0x0000017BB2BA2490>, 'Squad'], 'mordhau': [<Bot.cogs.battlemetric.Mordhau object at 0x0000017BB2B22B50>, 'Mordhau'], 'risingstorm': [<Bot.cogs.battlemetric.RisingStorm object at 0x0000017BB2AC76A0>, 'RisingStorm'], 'btw': [<Bot.cogs.battlemetric.BTW object at 0x0000017BB2A79040>, 'BTW']} embed has been updated

@@ -1,0 +1,35 @@
+    {
+      "title": "**__React for Roles!__**",
+      "description": "Click the corresponding icon(s) below to gain\naccess, of any of the games below",
+      "color": 969764,
+      "fields": [
+        {
+          "name": "^^^^^^^^^^^^^^^^^^^",
+          "value": "<:dyinglight:743517713195860030> - Dying light\n\n<:CSGO:685672825448955980> - Counter Strike\n\n<:Apex:687462986902011914> - Apex Legends\n\n<:titanfall:738161136993566841> - Titanfall\n\n<:BFV:738161630176870481> - Battlefield\n\n<:GTA5:684276724455833736> - Grand Theft Auto\n\n<:D2:631722866228068352> - Destiny 2\n\n<:rs2:763833412603478016> - Rising Storm 2",
+          "inline": true
+        },
+        {
+          "name": "^^^^^^^^^^^^^^^^^^^",
+          "value": "<:f1:755474895562866799> - F1 Racing\n\n<:terraria:736684124223438968> - Terraria\n\n<:factorio:736683998172151939> - Factorio\n\n<:StarCitizen:685673151157239825> - Star Citizen\n\n<:Runescape:684276146740658189> - Runescape\n\n<:fallguys:743518733309313084> - Fall guys\n\n<:LoL:647951737402949632> - League of Legends\n\n<:TS:760848517261950996> - Truck Simulator\n\n<:ark:722866897577574491> - Ark Survival\n\n<:handprint:765172134368509952>: - Phasmophobia",
+          "inline": true
+        },
+        {
+          "name": "**If you do not know how to react**",
+          "value": "**follow this clip**"
+        }
+      ],
+      "author": {
+        "name": "20r Gaming Community",
+        "icon_url": "https://cdn.discordapp.com/attachments/721427319381688320/758831668949418004/20r_Logo_2020.png"
+      },
+      "footer": {
+        "text": "20r Gaming Community",
+        "icon_url": "https://cdn.discordapp.com/attachments/721427319381688320/758831668949418004/20r_Logo_2020.png"
+      },
+      "image": {
+        "url": "https://i.imgur.com/fgkSPN1.gif"
+      },
+      "thumbnail": {
+        "url": "https://cdn.discordapp.com/attachments/721427319381688320/758831668949418004/20r_Logo_2020.png"
+      }
+    }

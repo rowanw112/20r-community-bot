@@ -1,0 +1,222 @@
+import logging
+import time
+import discord
+import asyncio
+import os
+import subprocess
+import shlex
+import git
+from git import Repo
+from pathlib import Path
+from discord.ext import commands
+from logging.handlers import TimedRotatingFileHandler
+
+import sys
+import pkgutil
+
+__depth__ = 2
+
+__path__ = os.path.abspath(os.path.dirname(__name__))
+
+pkgutil.extend_path(__path__, __name__)
+
+__cwd__ = os.path.abspath(__path__ + "{}..".format(os.sep))
+sys.path.append(__cwd__)
+__cwd__ = os.path.abspath(__path__ + str("{}..".format(os.sep) * 2))
+sys.path.append(__cwd__)
+
+sys.path.append(__cwd__)
+
+from Bot.core.bot import Bot
+
+try:
+    log_path = os.path.abspath(Bot.config['logpath']) # TODO - Fix Inconsistent Use of single Quotes
+    Path(log_path).mkdir(parents=True, exist_ok=True)
+except KeyError as missing_key:
+    print(f"There is no Key \"{missing_key}\". Please enter the key in token:.")
+    sys.exit(1)
+
+# Log handling
+logFormatter = logging.Formatter('[%(asctime)s][%(threadName)s][%(name)s][%(lineno)d][%(levelname)s] %(message)s') # TODO - Fix Inconsistent Use of single Quotes
+logger = logging.getLogger()
+fileHandler = TimedRotatingFileHandler(os.path.join(log_path, 'bot.log'), encoding='utf8', # TODO - Fix Inconsistent Use of single Quotes
+                                       when="midnight", backupCount=7) # TODO - Fix Inconsistent Use of single Quotes
+fileHandler.setFormatter(logFormatter)
+logger.addHandler(fileHandler)
+consoleHandler = logging.StreamHandler()
+consoleHandler.setFormatter(logFormatter)
+logger.addHandler(consoleHandler)
+logging.getLogger('Discord') # TODO - Fix Inconsistent Use of single Quotes
+############################
+
+
+if Bot.config:
+    try:
+        client = Bot(
+            command_prefix=(Bot.config['prefix']),  # sets the prefix the commands for the bot
+            case_insensitive=(Bot.config["case_insensitive"]),  # sets the case sensitivity for commands
+            activity=discord.Game(name=Bot.config['activity'])  # sets the status of the bot
+        )
+    except KeyError as missing_key:
+        logger.critical(f"There is no config item {missing_key}. You have likely modified a key name in bot.yml,"
+                        f" ensure bot.yml is correctly created.")
+        sys.exit(1)
+    if not "JSONDirectory" in Bot.config.keys():
+        logger.critical(f"There is no config item \"JSONDirectory\". "
+                        f"You have likely modified a key name in bot.yml, ensure bot.yml is correctly created.")
+        sys.exit(1)
+else:
+    logger.critical("Exiting, config file was not properly loaded!")
+    sys.exit(1)
+
+
+# Load Cogs Command
+@client.command()
+@commands.is_owner()
+async def load(ctx, extension):
+    try:
+        gitpull()
+    except:
+        pass
+    client.load_extension(f"Bot.cogs.{extension.lower()}")
+    await ctx.send(f"`{extension} loaded!`", delete_after=10)
+    await ctx.message.delete(delay=10)
+
+
+# Unload Cogs Command
+@client.command()
+@commands.is_owner()
+async def unload(ctx, extension):
+    try:
+        client.unload_extension(f"Bot.cogs.{extension.lower()}")
+        await ctx.send(f"`{extension} unloaded!`", delete_after=10)
+        await ctx.message.delete(delay=10)
+    except:
+        logging.exception("Got exception on main handler")
+        raise
+
+
+# Restart Specific Cog Command
+@client.command()
+@commands.is_owner()
+async def restart(ctx, extension):
+    try:
+        gitpull()
+    except:
+        pass
+    try:
+        try:
+            client.unload_extension(f"Bot.cogs.{extension.lower()}")
+        except:
+            pass
+        client.load_extension(f"Bot.cogs.{extension.lower()}")
+        await ctx.send(f"`{extension} restarted!`", delete_after=10)
+        await ctx.message.delete(delay=10)
+    except:
+        logging.exception("Got exception on main handler")
+        raise
+
+
+@client.command()
+@commands.is_owner()
+async def restartbot(ctx):
+    """
+    restarts the bot
+    :param ctx:
+    """
+    try:
+        await ctx.send(f"Bot is restarting", delete_after=5)
+        await client.close()
+    except:
+        logging.exception("Got exception on main handler")
+        raise
+
+
+# Reload All Cogs Command
+@client.command()
+@commands.is_owner()
+async def reload(ctx):
+    try:
+        gitpull()
+    except:
+        pass
+    try:
+        for cog in os.listdir("..{0}cogs".format(
+            os.sep
+        )):
+            if cog.endswith(".py"):
+                try:
+                    client.unload_extension(f"Bot.cogs.{cog[:-3]}")
+                except:
+                    pass
+                client.load_extension(f"Bot.cogs.{cog[:-3]}")
+                await ctx.send(f"`{cog[:-3]} loaded!`", delete_after=10)
+        await ctx.send("`All cogs reloaded!`", delete_after=10)
+        await ctx.message.delete(delay=10)
+    except:
+        logging.exception("Got exception on main handler")
+        raise
+
+
+# Function For Loading All Logs
+def load_all_cogs():
+    for filename in os.listdir(Bot.CogDirectory):
+        if filename.endswith(".py"):
+            client.load_extension(f"Bot.cogs.{filename[:-3]}")
+    logging.info("All cogs loaded!")
+
+
+def gitpull():
+    try:
+        # repo = git.Repo("{0}opt{0}rowans-bot{0}".format( # Issue
+        #
+        # ))
+        repo = git.Repo(__cwd__)
+        repo.remotes.origin.pull("Development")
+        logging.info("git pulled")
+        return
+    except:
+        logging.exception("Got exception on main handler")
+        raise
+
+
+try:
+    logger.setLevel(client.config['log level']) # TODO - Fix Inconsistent Use of single Quotes
+except ValueError:
+    logger.setLevel('INFO') # TODO - Fix Inconsistent Use of single Quotes
+    logger.warning('Set level to INFO, log level was incorrectly set in bot.yml') # TODO - Fix Inconsistent Use of single Quotes
+    time.sleep(10)
+
+
+@client.event
+async def on_ready():
+    """
+    Function called for when the bot is up and ready!
+    """
+    logging.info(f'Bot online. Logged in as \nName: {client.user} \nID: ({client.user.id})') # TODO - Fix Inconsistent Use of single Quotes
+    logging.info(f"Currently have access to the following guilds: "
+                 f"{', '.join([f'{guild.name} ({guild.id})' for guild in client.guilds])}")
+    logging.info("Current command prefix " + f"\"{client.command_prefix}\"")
+
+
+def start_bot():
+    """
+    Function for starting the bot
+    Loads all the cogs in bot.yml
+    :return:
+    """
+    load_all_cogs()
+    try:
+        if not client.config['devStart']: # TODO - Fix Inconsistent Use of single Quotes
+            asyncio.get_event_loop().run_until_complete(client.start(client.config['token'])) # TODO - Fix Inconsistent Use of single Quotes
+        else:
+            asyncio.get_event_loop().run_until_complete(client.start(client.config['devToken'])) # TODO - Fix Inconsistent Use of single Quotes
+    except discord.errors.LoginFailure:
+        logger.critical(f"Could not login. Check your bot token!")
+    except KeyError as missing_key:
+        logger.critical(f"There is no config item {missing_key}. You have likely modified a key name in bot.yml,"
+                        f" ensure bot.yml is correctly created.")
+
+
+if __name__ == "__main__":
+    start_bot()
