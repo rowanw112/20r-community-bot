@@ -1,0 +1,20 @@
+{
+"title": "**__Help and Information__**",
+"color": 9844733,
+"fields": [
+  {
+    "name": "**__Here are the following commands__**",
+    "value": "`.help` - List of useful commands\n`.merch` - Our merch!\n`.patreon` - Support 20R on Patreon\n`.donate` - Support 20R by donating",
+    "inline": true
+  },
+  {
+    "name": "​",
+    "value": "`.staff` - List of our staff\n`.divapp` - To make your own division\n`.social` - To view our social links",
+    "inline": true
+  },
+  {
+    "name": "**__Check out __**",
+    "value": "<#776972330747297812> for the FAQ and Rules\n<#744029774820933633> To get all your gaming roles!"
+  }
+]
+}

@@ -1,0 +1,15 @@
+{
+      "title": "What is your region?",
+      "description": "Please react below with your current `Region`!",
+      "color": 7538078,
+      "fields": [
+        {
+          "name": "Regions",
+          "value": "EU - <:EU:863946294711549973>\nNA - <:NA:863946723792912404>\nOCE - <:OCE:863946747876343828>\nASIA - <:ASIA:863946734778581023>"
+        },
+        {
+          "name": "Why do this?",
+          "value": "It will simply allow you to more easily find people from your region, and vice versa."
+        }
+      ]
+    }

@@ -1,0 +1,45 @@
+{
+      "title": "**__Staff List__**",
+      "description": "Leader - <@139076681951346688>",
+      "color": 9844733,
+      "fields": [
+        {
+          "name": "**__Directors__**",
+          "value": "Director of Operations - <@136146806567469056>\nDirector of Technology - <@278745666820243458>",
+          "inline": true
+        },
+        {
+          "name": "**__Managers__**",
+          "value": "Manager of Recruitment - <@238669237273493507>\nManager of Staff Development - <@302894533329420289>\nManager of EU Esports - <@129641613315145728>\nManager of NA Esports - <@776553879789764668>\nManager of Discord - <@102896515470589952>\nManager of Experimental - <@690229755609612322>\nChief Engineer - <@212038459009794049>",
+          "inline": true
+        },
+        {
+          "name": "​",
+          "value": "​"
+        },
+        {
+          "name": "**__Official Division Contacts__**",
+          "value": "Call of Duty - <@162468372372652032>\nD&D - <@232209121460486145>\nEscape From Tarkov - <@106140717528674304>\nMordhau - <@528830060350799884>\nPlanetside 2 - <@690229755609612322>\nRocket League - <@265454065251516418>\nRust - <@162468372372652032>\nSquad - <@248262569196781579>",
+          "inline": true
+        },
+        {
+          "name": "**__Experimental Division Contacts__**",
+          "value": "EVE: Online - <@256179798273949697>\nHell Let Loose - <@503994163738574848>\nSea of Thieves - <@171809721064357888>\nStrategy - <@197081686939271169>",
+          "inline": true
+        },
+        {
+          "name": "​",
+          "value": "​"
+        },
+        {
+          "name": "**__Technical Division Contacts__**",
+          "value": "Content Creation - <@351562528624607236>\nBlog - <@141946162608472064>\nTwitch - <@216999573758017536>\nSocial Media - <@139076681951346688>, <@136146806567469056>\nSquad Server - <@248262569196781579>\nMordhau Server - <@528830060350799884>",
+          "inline": true
+        },
+        {
+          "name": "**__Project Contacts__**",
+          "value": "Minecraft Server - <@136146806567469056>\nRust Server - <@139076681951346688>\nPodcast - <@141946162608472064>\nMerch - <@136146806567469056>",
+          "inline": true
+        }
+      ]
+    }

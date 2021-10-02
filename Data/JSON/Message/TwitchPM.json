@@ -1,0 +1,15 @@
+{
+      "title": "**__Welcome to our Twitch__**",
+      "description": "Welcome to our livestream channel, where you can watch the livestream with everyone.\n\nCome invite your friends at \nhttps://discord.gg/R4CGPbGp8w\n\nFollow us on <a:twitchg:787785007753723916>[Twitch](https://www.twitch.tv/20r_gaming)<a:twitchg:787785007753723916>",
+      "url": "https://www.twitch.tv/20r_gaming",
+      "color": 6570405,
+      "footer": {
+        "text": "Twitch Notifier"
+      },
+      "image": {
+        "url": "https://cdn.discordapp.com/attachments/707765678492352543/797966480586702908/20r_twitch_banner.jpg"
+      },
+      "thumbnail": {
+        "url": "https://cdn.discordapp.com/attachments/721427319381688320/758831668949418004/20r_Logo_2020.png"
+      }
+    }

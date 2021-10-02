@@ -1,0 +1,12 @@
+{
+  "title": "**__Donate to 20R__**",
+  "description": "Thank you for being interested in supporting <:20R:757330369333821462>\nGet more information at <#776142852388421642>\ncheck out `.patreon` too",
+  "url": "https://www.patreon.com/20r",
+  "color": 9844733,
+  "fields": [
+    {
+      "name": "**__For One Time Donations__**",
+      "value": "[For one time donations](https://donatebot.io/checkout/531243268256694313)\n(make sure to input your discord ID in the reward Username)\nThis is used if you don't want to do a subscription"
+    }
+  ]
+}

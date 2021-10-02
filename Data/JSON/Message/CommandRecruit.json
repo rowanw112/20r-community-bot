@@ -1,0 +1,20 @@
+  {
+    "title": "**__React for Roles__**",
+    "description": "**Click the corresponding icon(s) below to gain \naccess, to the recruitment channel**",
+    "color": 7506394,
+    "fields": [
+      {
+        "name": "​",
+        "value": "**<:MEU:663616563424919553> - Mordhau\n\n<:PS2:638883225082527744> - Planetside 2\n\n<:EFT:638891451043938304> - Escape From Tarkov\n\n<:Squad:638892257344225321> - Squad\n\n<:RL:638878864810180628> - Rocket League\n\n<:dnd:724383281344413747> - Dungeons and Dragons\n\n<:cod:743518435606265917> - Call of Duty\n\n<:rust:763080587267014726> - Rust\n\n<a:20NEO:795718164046413865> - Experimental Divisions**",
+        "inline": true
+      },
+      {
+        "name": "​",
+        "value": "```diff\n-​-- CLICK ON THE EMOJIS BELOW TO GAIN ROLES ---```\n:arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down:"
+      }
+    ],
+    "footer": {
+      "text": "20r Gaming",
+      "icon_url": "https://cdn.discordapp.com/attachments/721427319381688320/757678939312226334/Logo_2020.png"
+    }
+  }
