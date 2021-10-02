@@ -27,6 +27,7 @@ class Bot(commands.AutoShardedBot):
     config = configfile()  # loads the config file from config.py
     JSONDirectory = config["JSONDirectory"]
     CogDirectory = config["CogDirectory"]
+    LogDirectory = config["logpath"]
     GITRepo = config["GITRepo"]
     LOGO = "https://cdn.discordapp.com/attachments/721427319381688320/758831668949418004/20r_Logo_2020.png"
     """ Loads all the permissions """
@@ -42,14 +43,22 @@ class Bot(commands.AutoShardedBot):
         super().__init__(*args, **kwargs)
 
     async def on_command_error(self, ctx: commands.Context, exception: commands.errors.CommandInvokeError):
+        """
+        Returns an error to the user when they've entered a command incorrectly.
+        :param ctx:
+        :param exception:
+        :return:
+        """
         error = getattr(exception, "original", exception)
         if isinstance(exception, commands.errors.BadArgument):
             await ctx.send(f"{str(exception).replace('int', 'whole number')}"
                            f"\n\nEnsure you're passing the correct values for each parameter.", delete_after=10)
         elif isinstance(error, (commands.MissingRole, commands.MissingAnyRole, commands.MissingPermissions)):
-            await ctx.send(f"{ctx.message.author.mention} You do not have permissions to use this command", delete_after=10)
+            await ctx.send(f"{ctx.message.author.mention} You do not have permissions to use this command",
+                           delete_after=10)
         elif isinstance(exception, commands.errors.MissingRequiredArgument):
-            await ctx.send(f"{(str(exception).split()[0].title() + ' ' + ' '.join(str(exception).split()[1:]))}", delete_after=10)
+            await ctx.send(f"{(str(exception).split()[0].title() + ' ' + ' '.join(str(exception).split()[1:]))}",
+                           delete_after=10)
         elif isinstance(exception, commands.errors.CheckAnyFailure):
             await ctx.send(f"{str(exception)}", delete_after=10)
         elif isinstance(error, commands.CommandNotFound):
@@ -67,14 +76,14 @@ class Bot(commands.AutoShardedBot):
         else:
             logger.exception(traceback.print_exception(type(error), error, error.__traceback__))
             await ctx.send(
-                f"{ctx.message.author.mention} There was an unexpected error while executing this command! My creator has been notified", delete_after=10)
+                f"{ctx.message.author.mention} There was an unexpected error while executing this command! My creator has been notified",
+                delete_after=10)
 
     async def on_command(self, ctx: commands.Context):
         try:
-            logger.info(f'{ctx.author.display_name} ({ctx.author.id}) invoked a command '
-                        f'\"{ctx.message.content}\" in the guild {ctx.guild} ({ctx.guild.id}) in the channel '
-                        f'{ctx.channel.name} ({ctx.channel.id})')
+            logger.info(f"{ctx.author.display_name} ({ctx.author.id}) invoked a command "
+                        f"\"{ctx.message.content}\" in the guild {ctx.guild} ({ctx.guild.id}) in the channel "
+                        f"{ctx.channel.name} ({ctx.channel.id})")
         except AttributeError:
-            logger.info(f'{ctx.author.display_name} ({ctx.author.id}) invoked a command '
-                        f'\"{ctx.message.content}\" in DMs')
-
+            logger.info(f"{ctx.author.display_name} ({ctx.author.id}) invoked a command "
+                        f"\"{ctx.message.content}\" in DMs")

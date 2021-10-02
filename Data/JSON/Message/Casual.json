@@ -1,35 +1,19 @@
-    {
-      "title": "**__React for Roles!__**",
-      "description": "Click the corresponding icon(s) below to gain\naccess, of any of the games below",
+{
       "color": 969764,
       "fields": [
         {
-          "name": "^^^^^^^^^^^^^^^^^^^",
-          "value": "<:dyinglight:743517713195860030> - Dying light\n\n<:CSGO:685672825448955980> - Counter Strike\n\n<:Apex:687462986902011914> - Apex Legends\n\n<:titanfall:738161136993566841> - Titanfall\n\n<:BFV:738161630176870481> - Battlefield\n\n<:GTA5:684276724455833736> - Grand Theft Auto\n\n<:D2:631722866228068352> - Destiny 2\n\n<:rs2:763833412603478016> - Rising Storm 2",
+          "name": "**__Genre__**",
+          "value": "<:Division2:782035156365738044> - Action RPG\n\n<:2077:743517359771222126> - Action-Adventure\n\n<:Runescape:684276146740658189> - MMORPG\n\n<:DOTA:796376177270456363> - MOBA\n\n<:titanfall:738161136993566841> - Fast-Paced Shooters\n\n<:BFV:738161630176870481> - Large Shooters\n\n<:f1:755474895562866799> - Driving/Racing",
           "inline": true
         },
         {
-          "name": "^^^^^^^^^^^^^^^^^^^",
-          "value": "<:f1:755474895562866799> - F1 Racing\n\n<:terraria:736684124223438968> - Terraria\n\n<:factorio:736683998172151939> - Factorio\n\n<:StarCitizen:685673151157239825> - Star Citizen\n\n<:Runescape:684276146740658189> - Runescape\n\n<:fallguys:743518733309313084> - Fall guys\n\n<:LoL:647951737402949632> - League of Legends\n\n<:TS:760848517261950996> - Truck Simulator\n\n<:ark:722866897577574491> - Ark Survival\n\n<:handprint:765172134368509952>: - Phasmophobia",
+          "name": "​",
+          "value": "<:ark:722866897577574491>  - Survival\n\n<:pubg:743520326683590759> - Battle-Royale\n\n<:HADES:796376733166075964> - Indie\n\n<:TS:760848517261950996> - Simulation\n\n<:factorio:736683998172151939> - Construction\n\n<:amongus:755098134027305241> - Party\n\n<:vr:780906821597921301> - Virtual Reality",
           "inline": true
         },
         {
-          "name": "**If you do not know how to react**",
-          "value": "**follow this clip**"
+          "name": "​",
+          "value": "```diff\n-​-- CLICK ON THE EMOJIS BELOW TO GAIN ROLES ---```\n:arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down:"
         }
-      ],
-      "author": {
-        "name": "20r Gaming Community",
-        "icon_url": "https://cdn.discordapp.com/attachments/721427319381688320/758831668949418004/20r_Logo_2020.png"
-      },
-      "footer": {
-        "text": "20r Gaming Community",
-        "icon_url": "https://cdn.discordapp.com/attachments/721427319381688320/758831668949418004/20r_Logo_2020.png"
-      },
-      "image": {
-        "url": "https://i.imgur.com/fgkSPN1.gif"
-      },
-      "thumbnail": {
-        "url": "https://cdn.discordapp.com/attachments/721427319381688320/758831668949418004/20r_Logo_2020.png"
-      }
+      ]
     }

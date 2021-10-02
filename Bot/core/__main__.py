@@ -27,33 +27,35 @@ sys.path.append(__cwd__)
 from Bot.core.bot import Bot
 
 try:
-    log_path = os.path.abspath(Bot.config['logpath']) # TODO - Fix Inconsistent Use of single Quotes
+    log_path = os.path.abspath(Bot.config["logpath"])
     Path(log_path).mkdir(parents=True, exist_ok=True)
 except KeyError as missing_key:
     print(f"There is no Key \"{missing_key}\". Please enter the key in token:.")
     sys.exit(1)
 
 # Log handling
-logFormatter = logging.Formatter('[%(asctime)s][%(threadName)s][%(name)s][%(lineno)d][%(levelname)s] %(message)s') # TODO - Fix Inconsistent Use of single Quotes
+logFormatter = logging.Formatter(
+    "[%(asctime)s][%(threadName)s][%(name)s][%(lineno)d][%(levelname)s] %(message)s")
 logger = logging.getLogger()
-fileHandler = TimedRotatingFileHandler(os.path.join(log_path, 'bot.log'), encoding='utf8', # TODO - Fix Inconsistent Use of single Quotes
-                                       when="midnight", backupCount=7) # TODO - Fix Inconsistent Use of single Quotes
+fileHandler = TimedRotatingFileHandler(os.path.join(log_path, "bot.log"), encoding="utf8", when="midnight",
+                                       backupCount=7)
 fileHandler.setFormatter(logFormatter)
 logger.addHandler(fileHandler)
 consoleHandler = logging.StreamHandler()
 consoleHandler.setFormatter(logFormatter)
 logger.addHandler(consoleHandler)
-logging.getLogger('Discord') # TODO - Fix Inconsistent Use of single Quotes
+logging.getLogger("Discord")
 ############################
 
 
 if Bot.config:
     try:
         client = Bot(
-            command_prefix=(Bot.config['prefix']),  # sets the prefix the commands for the bot
+            command_prefix=(Bot.config["prefix"]),  # sets the prefix the commands for the bot
             case_insensitive=(Bot.config["case_insensitive"]),  # sets the case sensitivity for commands
-            activity=discord.Game(name=Bot.config['activity'])  # sets the status of the bot
+            activity=discord.Game(name=Bot.config["activity"])  # sets the status of the bot
         )
+        client.remove_command('help')
     except KeyError as missing_key:
         logger.critical(f"There is no config item {missing_key}. You have likely modified a key name in bot.yml,"
                         f" ensure bot.yml is correctly created.")
@@ -69,7 +71,8 @@ else:
 
 # Load Cogs Command
 @client.command()
-@commands.is_owner()
+@commands.check_any(commands.is_owner(),
+                    commands.has_guild_permissions(administrator=True))
 async def load(ctx, extension):
     try:
         gitpull()
@@ -82,7 +85,8 @@ async def load(ctx, extension):
 
 # Unload Cogs Command
 @client.command()
-@commands.is_owner()
+@commands.check_any(commands.is_owner(),
+                    commands.has_guild_permissions(administrator=True))
 async def unload(ctx, extension):
     try:
         client.unload_extension(f"Bot.cogs.{extension.lower()}")
@@ -95,7 +99,8 @@ async def unload(ctx, extension):
 
 # Restart Specific Cog Command
 @client.command()
-@commands.is_owner()
+@commands.check_any(commands.is_owner(),
+                    commands.has_guild_permissions(administrator=True))
 async def restart(ctx, extension):
     try:
         gitpull()
@@ -115,23 +120,21 @@ async def restart(ctx, extension):
 
 
 @client.command()
-@commands.is_owner()
+@commands.check_any(commands.is_owner(),
+                    commands.has_guild_permissions(administrator=True))
 async def restartbot(ctx):
     """
     restarts the bot
     :param ctx:
     """
-    try:
-        await ctx.send(f"Bot is restarting", delete_after=5)
-        await client.close()
-    except:
-        logging.exception("Got exception on main handler")
-        raise
+    await ctx.send(f"Bot is restarting", delete_after=5)
+    sys.exit()
 
 
 # Reload All Cogs Command
 @client.command()
-@commands.is_owner()
+@commands.check_any(commands.is_owner(),
+                    commands.has_guild_permissions(administrator=True))
 async def reload(ctx):
     try:
         gitpull()
@@ -139,7 +142,7 @@ async def reload(ctx):
         pass
     try:
         for cog in os.listdir("..{0}cogs".format(
-            os.sep
+                os.sep
         )):
             if cog.endswith(".py"):
                 try:
@@ -165,11 +168,18 @@ def load_all_cogs():
 
 def gitpull():
     try:
-        # repo = git.Repo("{0}opt{0}rowans-bot{0}".format( # Issue
-        #
-        # ))
         repo = git.Repo(__cwd__)
-        repo.remotes.origin.pull("Development")
+        # blast any current changes
+        repo.git.reset('--hard')
+        # ensure master is checked out
+        repo.heads.master.checkout()
+        # blast any changes there (only if it wasn't checked out)
+        repo.git.reset('--hard')
+        # pull in the changes from from the remote
+        repo.remotes.origin.pull("master")
+
+        # repo.git.reset('--hard')
+        # repo.remotes.origin.pull("Development")
         logging.info("git pulled")
         return
     except:
@@ -178,10 +188,10 @@ def gitpull():
 
 
 try:
-    logger.setLevel(client.config['log level']) # TODO - Fix Inconsistent Use of single Quotes
+    logger.setLevel(client.config["log level"])
 except ValueError:
-    logger.setLevel('INFO') # TODO - Fix Inconsistent Use of single Quotes
-    logger.warning('Set level to INFO, log level was incorrectly set in bot.yml') # TODO - Fix Inconsistent Use of single Quotes
+    logger.setLevel("INFO")
+    logger.warning("Set level to INFO, log level was incorrectly set in bot.yml")
     time.sleep(10)
 
 
@@ -190,7 +200,8 @@ async def on_ready():
     """
     Function called for when the bot is up and ready!
     """
-    logging.info(f'Bot online. Logged in as \nName: {client.user} \nID: ({client.user.id})') # TODO - Fix Inconsistent Use of single Quotes
+    logging.info(
+        f"Bot online. Logged in as \nName: {client.user} \nID: ({client.user.id})")
     logging.info(f"Currently have access to the following guilds: "
                  f"{', '.join([f'{guild.name} ({guild.id})' for guild in client.guilds])}")
     logging.info("Current command prefix " + f"\"{client.command_prefix}\"")
@@ -204,10 +215,12 @@ def start_bot():
     """
     load_all_cogs()
     try:
-        if not client.config['devStart']: # TODO - Fix Inconsistent Use of single Quotes
-            asyncio.get_event_loop().run_until_complete(client.start(client.config['token'])) # TODO - Fix Inconsistent Use of single Quotes
+        if not client.config["devStart"]:
+            asyncio.get_event_loop().run_until_complete(
+                client.start(client.config["token"]))
         else:
-            asyncio.get_event_loop().run_until_complete(client.start(client.config['devToken'])) # TODO - Fix Inconsistent Use of single Quotes
+            asyncio.get_event_loop().run_until_complete(
+                client.start(client.config["devToken"]))
     except discord.errors.LoginFailure:
         logger.critical(f"Could not login. Check your bot token!")
     except KeyError as missing_key:

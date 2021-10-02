@@ -1,7 +1,7 @@
 test test testy
 # 20r Gaming Discord Bot #
 
-*Gaming Discord Bot*
+*20r Gaming Discord Bot*
 
 
 

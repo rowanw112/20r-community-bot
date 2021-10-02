@@ -6,11 +6,11 @@ from Bot.core.bot import Bot
 logger = logging.getLogger(__name__)
 
 
-prefixes = "[R] ", "[Ⅰ] ", "[ⅠⅠ] ", "[ⅠⅠⅠ] ", "[ⅠⅤ] ", "[Ⅴ] ", "[A] ", "[L] ", "[I] ", "[DA] ", "[DL] ", "[REC] ", "[CO] ", "[VG] ", "[AS] ", "[D] ", "[SPC] "
+prefixes = "[R] ", "[Ⅰ] ", "[ⅠⅠ] ", "[ⅠⅠⅠ] ", "[ⅠⅤ] ", "[Ⅴ] ", "[A] ", "[L] ", "[DA] ", "[DL] ", "[VG] ", "[D] ", "[M] ", "[IN] ", "[TS] "
 #   These are the prefixes that the bot ignores for assigning [R] tag.
-prefixesRemoval = "[R] ", "[Ⅰ] ", "[ⅠⅠ] ", "[ⅠⅠⅠ] ", "[ⅠⅤ] ", "[Ⅴ] ", "[A] ", "[L] ", "[I] ", "[REC] ", "[SPC] "
+prefixesRemoval = "[R] ", "[Ⅰ] ", "[ⅠⅠ] ", "[ⅠⅠⅠ] ", "[ⅠⅤ] ", "[Ⅴ] ", "[A] ", "[L] "
 #   These are the prefixes that the bot will remove upon a removal command.
-prefixesExempt = "[A] ", "[L] ", "[DA] ", "[DL] ", "[CO] ", "[VG] ", "[AS] ", "[D] ", "[TS] "
+prefixesExempt = "[A] ", "[L] ", "[DA] ", "[DL] ", "[CO] ", "[VG] ", "[M] ", "[D] ", "[TS] "
 
 
 def switcherLoad():

@@ -21,7 +21,8 @@ class ReactRoles(commands.Cog):
     @commands.command()
     @commands.check_any(commands.is_owner(),
                         commands.has_any_role(*Bot.addPermission),
-                        commands.has_guild_permissions(manage_roles=True))
+                        commands.has_guild_permissions(manage_roles=True),
+                        commands.has_guild_permissions(administrator=True))
     async def embed(self, ctx, message):
         embedWhitelist = {
             "verification": [Verification(message), "Verification"],
@@ -31,7 +32,17 @@ class ReactRoles(commands.Cog):
             "rules": [Rules(message), "Rules"],
             "welcome": [Welcome(message), "Welcome"],
             "application": [Application(message), "Application"],
-            "comp": [Comp(message), "Comp"]
+            "strategy": [Strategy(message), "Strategy"],
+            "comp": [Comp(message), "Comp"],
+            "ps2": [PS2(message), "PS2"],
+            "rl": [RL(message), "RL"],
+            "commandrecruit": [CommandRecruit(message), "CommandRecruit"],
+            "populargames": [PopularGames(message), "PopularGames"],
+            "generalroles": [GeneralRoles(message), "GeneralRoles"],
+            "discover20r": [Discover20r(message), "Discover20r"],
+            # "welcome20r": [Welcome20r(message), "Welcome20r"],
+            "region20r": [Region20r(message), "Region20r"],
+            "member20r": [Member20r(message), "Member20r"]
         }
         try:
             await ctx.message.delete()
@@ -49,7 +60,6 @@ class ReactRoles(commands.Cog):
 
 
 class Embed(object):
-
     messageData = Bot.JSONDirectory + os.sep + "Embed" + os.sep + "Message.json"
     embedData = Bot.JSONDirectory + os.sep + "Message" + os.sep
     rolesData = Bot.JSONDirectory + os.sep + "Roles" + os.sep + "Roles.json"
@@ -161,11 +171,81 @@ class Application(Embed):
         super(Application, self).__init__(self.Name)
 
 
+class Strategy(Embed):
+    Name = "Strategy"
+
+    def __init__(self, *argv, **kwargs):
+        super(Strategy, self).__init__(self.Name)
+
+
 class Comp(Embed):
     Name = "Comp"
 
     def __init__(self, *argv, **kwargs):
         super(Comp, self).__init__(self.Name)
+
+
+class PS2(Embed):
+    Name = "PS2"
+
+    def __init__(self, *argv, **kwargs):
+        super(PS2, self).__init__(self.Name)
+
+
+class RL(Embed):
+    Name = "RL"
+
+    def __init__(self, *argv, **kwargs):
+        super(RL, self).__init__(self.Name)
+
+
+class GeneralRoles(Embed):
+    Name = "GeneralRoles"
+
+    def __init__(self, *argv, **kwargs):
+        super(GeneralRoles, self).__init__(self.Name)
+
+
+class CommandRecruit(Embed):
+    Name = "CommandRecruit"
+
+    def __init__(self, *argv, **kwargs):
+        super(CommandRecruit, self).__init__(self.Name)
+
+
+class PopularGames(Embed):
+    Name = "PopularGames"
+
+    def __init__(self, *argv, **kwargs):
+        super(PopularGames, self).__init__(self.Name)
+
+
+class Discover20r(Embed):
+    Name = "Discover20r"
+
+    def __init__(self, *argv, **kwargs):
+        super(Discover20r, self).__init__(self.Name)
+
+
+class Welcome20r(Embed):
+    Name = "Welcome20r"
+
+    def __init__(self, *argv, **kwargs):
+        super(Welcome20r, self).__init__(self.Name)
+
+
+class Region20r(Embed):
+    Name = "Region20r"
+
+    def __init__(self, *argv, **kwargs):
+        super(Region20r, self).__init__(self.Name)
+
+
+class Member20r(Embed):
+    Name = "Member20r"
+
+    def __init__(self, *argv, **kwargs):
+        super(Member20r, self).__init__(self.Name)
 
 
 # Called To Load Cog And Connect To Client

@@ -11,17 +11,20 @@ class LeaveMessage(commands.Cog):
 
     @commands.Cog.listener()
     async def on_member_remove(self, member: discord.Member):
-        try:
-            channel = self.client.get_channel(589941950837293070)
-            # embed = discord.Embed(colour=discord.Colour(16711680),
-            #                       description=f'{member.display_name}\n\n **has left the server**')
-            # embed.set_thumbnail(url=member.avatar_url)
-            # embed.set_footer(text="20r Gaming", icon_url=Bot.LOGO)
-            # await channel.send(embed=embed)
-            await channel.send(f"{member.display_name} has left the server")
-        except:
-            logging.exception("Got exception on main handler")
-            raise
+        if member.id != 617357306199408663 and member.guild.id == 531243268256694313:
+            try:
+                channel = self.client.get_channel(589941950837293070)
+                # embed = discord.Embed(colour=discord.Colour(16711680),
+                #                       description=f'{member.display_name}\n\n **has left the server**')
+                # embed.set_thumbnail(url=member.avatar_url)
+                # embed.set_footer(text="20r Gaming", icon_url=Bot.LOGO)
+                # await channel.send(embed=embed)
+                await channel.send(f"{member.display_name} has left the server")
+            except:
+                logging.exception("Got exception on main handler")
+                raise
+        else:
+            pass
 
 
 # Called To Load Cog And Connect To Client

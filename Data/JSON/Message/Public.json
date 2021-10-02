@@ -5,21 +5,21 @@
       "fields": [
         {
           "name": "**Primary Division**",
-          "value": "<:MEU:663616563424919553> - Mordhau\n\n<:PS2:638883225082527744> - Planetside 2\n\n<:EFT:638891451043938304> - Escape From Tarkov\n\n<:Squad:638892257344225321> - Squad\n\n<:RL:638878864810180628> - Rocket League\n\n<:dnd:724383281344413747> - Dungeons and Dragons",
+          "value": "<:MEU:663616563424919553> - Mordhau\n\n<:PS2:638883225082527744> - Planetside 2\n\n<:EFT:638891451043938304> - Escape From Tarkov\n\n<:Squad:638892257344225321> - Squad\n\n<:RL:638878864810180628> - Rocket League\n\n<:dnd:724383281344413747> - Dungeons and Dragons\n\n<:cod:743518435606265917> - Call of Duty",
           "inline": true
         },
         {
           "name": "**Experimental Division**",
-          "value": "<:amongus:755098134027305241> - Among Us\n\n<:Siege:638881105960894466> - Rainbow Six\n\n<:valorant:704043427272065094> - Valorant\n\n<:minecraft:684275614647451662> - Minecraft\n\n<:HaloReach:650154329071943681> - Halo\n\n<:HLL1:718140737547403351> - Hell Let Loose\n\n<:cod:743518435606265917> - Call of duty\n\n<:MB:715633824892977203> - Mount and Blade\n\n<:rust:763080587267014726> - Rust\n\n<:strategy:763088357282545734> - Strategy\n\n<:WT:718142927594979409> - War Thunder\n\n<:beyondwire:768243401337995324> - Beyond The Wire",
+          "value": "<:minecraft:684275614647451662> - Minecraft\n\n<:HaloReach:650154329071943681> - Halo\n\n<:HLL1:718140737547403351> - Hell Let Loose\n\n<:rust:763080587267014726> - Rust\n\n<:strategy:763088357282545734> - Strategy\n\n<:WT:718142927594979409> - War Thunder\n\n<:elite:780574256907550742> - Elite Dangerous\n\n<:eve:799761443536896030> - Eve Online",
           "inline": true
         },
         {
-          "name": "**If you are interested in watching our livestreams**",
-          "value": "**React to** <:tw:731366042814775336>"
+          "name": "**General Roles**",
+          "value": "**React to** <:tw:731366042814775336> - To be notified of our **Livestreams**\n\n**React to** :newspaper: - To get the **latest** 20R news\n\n**React to** <:mortarboard:785237025997324329> - For **Professional Development**, Such as **work and education**.\n\n**React to** <:Seed:798606172252799027> - To **seed** our servers and keep them populated\n\n**React to** <:LFG:798605927045529671> - **LFG** role to group up with others"
         },
         {
-          "name": "**If you're interested in upvoting our posts for advertising and helping us. This is optional**",
-          "value": "**React to** <:upvote:758806539418599484>\n\n**If you do not know how to react, please follow this clip**"
+          "name": "**If you do not know how to react**",
+          "value": ":arrow_double_down: :arrow_double_down: please follow this clip**:arrow_double_down: :arrow_double_down:"
         }
       ],
       "footer": {

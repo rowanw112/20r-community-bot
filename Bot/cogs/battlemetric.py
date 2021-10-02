@@ -25,10 +25,14 @@ class SteamAPI(commands.Cog):
 
     @commands.command()
     @commands.check_any(commands.is_owner(),
-                        commands.has_any_role(*Bot.addPermission))
+                        commands.has_any_role(*Bot.addPermission),
+                        commands.has_guild_permissions(administrator=True))
     async def squadseed(self, ctx):
         """ Notifies the users about seeding the server """
-        await ctx.message.delete()
+        try:
+            await ctx.message.delete()
+        except:
+            pass
         squadRole = discord.utils.get(ctx.guild.roles, name="Squad")
         squadDRole = discord.utils.get(ctx.guild.roles, name="Squad Division")
         embed = Squad().squadseedNotification
@@ -36,12 +40,40 @@ class SteamAPI(commands.Cog):
 
 
     @commands.command()
-    @commands.is_owner()
+    @commands.check_any(commands.is_owner(),
+                        commands.has_any_role(*Bot.addPermission),
+                        commands.has_guild_permissions(administrator=True))
+    async def seed(self, ctx, game, seedteam=None):
+        """ Notifies the users about seeding the server """
+        try:
+            await ctx.message.delete()
+        except:
+            pass
+        rolename = game.capitalize()
+        Game = {
+            "squad": Squad(),
+            "mordhau": Mordhau(),
+            "btw": BTW()
+            #"rust": Rust()
+        }
+        target = Game[game.lower()]
+        Role0 = discord.utils.get(ctx.guild.roles, name="Seed")
+        Role1 = discord.utils.get(ctx.guild.roles, name=rolename)
+        Role2 = discord.utils.get(ctx.guild.roles, name=f"{rolename} Division")
+        embed = target.squadseedNotification
+        if seedteam == None:
+            await ctx.send(content=f"{Role1.mention} {Role2.mention}", embed=embed)
+        else:
+            await ctx.send(content=f"{Role0.mention} {Role1.mention} {Role2.mention}", embed=embed)
+
+    @commands.command()
+    @commands.check_any(commands.is_owner(),
+                        commands.has_guild_permissions(administrator=True))
     async def updatestatus(self, ctx, server):
         Server = {
             "squad": [Squad(), "Squad"],
             "mordhau": [Mordhau(), "Mordhau"],
-            "risingstorm": [RisingStorm(), "RisingStorm"],
+            # "risingstorm": [RisingStorm(), "RisingStorm"],
             "btw": [BTW(), "BTW"]
         }
         try:
@@ -55,12 +87,13 @@ class SteamAPI(commands.Cog):
             await ctx.send("The embedded message does not exist")
 
     @commands.command()
-    @commands.is_owner()
+    @commands.check_any(commands.is_owner(),
+                        commands.has_guild_permissions(administrator=True))
     async def createstatus(self, ctx, server):
         Server = {
             "squad": [Squad(), "Squad"],
             "mordhau": [Mordhau(), "Mordhau"],
-            "risingstorm": [RisingStorm(), "RisingStorm"],
+            # "risingstorm": [RisingStorm(), "RisingStorm"],
             "btw": [BTW(), "BTW"]
         }
         try:
@@ -198,7 +231,7 @@ class Metric(object):
         embed.set_image(
             url="https://cdn.discordapp.com/attachments/711777537977614336/757362630338805913/20redit.png")
         embed.set_thumbnail(url=Bot.LOGO)
-        embed.set_author(name="20r Gaming - Squad - NA Server", url="https://discord.gg/20r",
+        embed.set_author(name="20r Gaming", url="https://discord.gg/20r",
                          icon_url=Bot.LOGO)
         return embed
 
@@ -258,7 +291,7 @@ class Metric(object):
 
 
 class Squad(Metric):
-    ID = "8077401"
+    ID = "9173175"
 
     def __init__(self, *argv, **kwargs):
         super(Squad, self).__init__(self.ID)
@@ -271,11 +304,11 @@ class Mordhau(Metric):
         super(Mordhau, self).__init__(self.ID)
 
 
-class RisingStorm(Metric):
-    ID = "8774729"
-
-    def __init__(self, *argv, **kwargs):
-        super(RisingStorm, self).__init__(self.ID)
+# class RisingStorm(Metric):
+#     ID = "8774729"
+#
+#     def __init__(self, *argv, **kwargs):
+#         super(RisingStorm, self).__init__(self.ID)
 
 
 class BTW(Metric):

@@ -3,6 +3,7 @@ from discord.ext import commands
 from discord.ext.tasks import *
 from Bot.utils.updatepermissions import *
 from Bot.core.bot import Bot
+from Bot.cogs.recruitment import *
 
 logger = logging.getLogger(__name__)
 
@@ -20,7 +21,8 @@ class PlanetSide2(commands.Cog):
         usage='@discordid planetside2-ingame-name'
     )
     @commands.check_any(commands.is_owner(),
-                        commands.has_any_role(*Bot.addPermission, 730606807298343024))
+                        commands.has_any_role(*Bot.addPermission, 730606807298343024),
+                        commands.has_guild_permissions(administrator=True))
     async def ps2add(self, ctx, member: discord.Member, *, cName):
         """
         Adds the user to the spreadsheet, assigns them the correct ps2 role and recruit tag
@@ -43,13 +45,15 @@ class PlanetSide2(commands.Cog):
                 await removePermissions(ctx, member, "20rStranger")
                 await assignPermissions(ctx, member, "20rstartAdd")
             await assignPermissions(ctx, member, outfitId)
+            useradd(rUser, str(member), str(member.id), "na", "ps2")
             await ctx.send(f"{member.mention}: " + message)
         else:
             await ctx.send(f"{member.mention}: " + message)
 
     @commands.command(pass_contxt=True)
     @commands.check_any(commands.is_owner(),
-                        commands.has_any_role(*Bot.addPermission, 730606807298343024))
+                        commands.has_any_role(*Bot.addPermission, 730606807298343024),
+                        commands.has_guild_permissions(administrator=True))
     async def ps2friend(self, ctx, member: discord.Member):
         """
         Assigns the friend role tags for players who don't want to join 20r as a member
@@ -64,7 +68,8 @@ class PlanetSide2(commands.Cog):
 
     @commands.command()
     @commands.check_any(commands.is_owner(),
-                        commands.has_any_role(*Bot.addPermission, 730606807298343024))
+                        commands.has_any_role(*Bot.addPermission, 730606807298343024),
+                        commands.has_guild_permissions(administrator=True))
     async def ps2delete(self, ctx, member: discord.Member, *, cName):
         """
         Removes users roles and from the ps2 spreadsheet
@@ -85,7 +90,8 @@ class PlanetSide2(commands.Cog):
 
     @commands.command()
     @commands.check_any(commands.is_owner(),
-                        commands.has_any_role(*Bot.addPermission, 730606807298343024))
+                        commands.has_any_role(*Bot.addPermission, 730606807298343024),
+                        commands.has_guild_permissions(administrator=True))
     async def ps2forcedelete(self, ctx, *, cName):
         """
         Removes player from the ps2 spreadsheet without a need of mentioning name

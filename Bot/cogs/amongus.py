@@ -53,9 +53,6 @@ class AmongUs(commands.Cog):
             await ctx.send("Please enter this command in <#762429962778574868>",
                            delete_after=5)  # tells user to enter in lfg
 
-    @commands.command()
-    async def test(self, ctx):
-        await ctx.send("tested 23423423423")
 
 # Called To Load Cog And Connect To Client
 def setup(client):

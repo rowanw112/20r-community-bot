@@ -11,9 +11,9 @@ class Admin(commands.Cog):
             logging.exception("Got exception on main handler")
             raise
 
-
     @commands.command()
-    @commands.check_any(commands.is_owner())
+    @commands.check_any(commands.is_owner(),
+                        commands.has_guild_permissions(administrator=True))
     async def updatenames(self, ctx, Oldprefix, Newprefix):
         try:
             await ctx.message.delete(delay=10)
@@ -33,12 +33,13 @@ class Admin(commands.Cog):
             raise
 
     @commands.command()
-    @commands.check_any(commands.is_owner())
+    @commands.check_any(commands.is_owner(),
+                        commands.has_guild_permissions(administrator=True))
     async def updateroles(self, ctx, oldrole, newrole):
         oldroleid = oldrole.replace("<", "").replace(">", "").replace("@", "").replace("&", "")
         newroleid = newrole.replace("<", "").replace(">", "").replace("@", "").replace("&", "")
-        Oldrole = discord.utils.get(ctx.guild.roles, id=oldroleid)
-        Newrole = discord.utils.get(ctx.guild.roles, id=newroleid)
+        Oldrole = discord.utils.get(ctx.guild.roles, id=int(oldroleid))
+        Newrole = discord.utils.get(ctx.guild.roles, id=int(newroleid))
         try:
             await ctx.message.delete(delay=10)
         except:
@@ -48,29 +49,52 @@ class Admin(commands.Cog):
             await ctx.send(f"This will take time as i am going through every member one by one", delete_after=10)
             for member in ctx.guild.members:
                 if Oldrole in member.roles:
-                    print(member.display_name)
-                    await member.add_roles(member.guild.get_role(newroleid), atomic=True)
-                    await member.remove_roles(member.guild.get_role(oldroleid), atomic=True)
+                    await member.add_roles(member.guild.get_role(int(newroleid)), atomic=True)
+                    await member.remove_roles(member.guild.get_role(int(oldroleid)), atomic=True)
         except:
             logging.exception("Got exception on main handler")
             raise
 
+
     @commands.command()
-    @commands.check_any(commands.is_owner())
+    @commands.check_any(commands.is_owner(),
+                        commands.has_guild_permissions(administrator=True))
+    async def userroles(self, ctx, role):
+        oldroleid = role.replace("<", "").replace(">", "").replace("@", "").replace("&", "")
+        Oldrole = discord.utils.get(ctx.guild.roles, id=int(oldroleid))
+        try:
+            await ctx.message.delete(delay=10)
+        except:
+            pass
+        try:
+            for member in ctx.guild.members:
+                if Oldrole in member.roles:
+                    print(member)
+        except:
+            logging.exception("Got exception on main handler")
+            raise
+
+
+
+
+    @commands.command()
+    @commands.check_any(commands.is_owner(),
+                        commands.has_guild_permissions(administrator=True))
     async def created(self, ctx, member: discord.Member):
         try:
             await ctx.message.delete(delay=10)
         except:
             pass
         try:
-            await ctx.send(f"{member.mention} account was created at " + member.created_at.strftime("%A, %B %d %Y @ %H:%M:%S %p") +" UTC")
+            await ctx.send(f"{member.mention} account was created at " + member.created_at.strftime(
+                "%A, %B %d %Y @ %H:%M:%S %p") + " UTC")
         except:
             logging.exception("Got exception on main handler")
             raise
 
-
     @commands.command()
-    @commands.check_any(commands.is_owner())
+    @commands.check_any(commands.is_owner(),
+                        commands.has_guild_permissions(administrator=True))
     async def changename(self, ctx):
         role = discord.utils.get(ctx.guild.roles, id=588816938202038292)
         try:
@@ -88,10 +112,10 @@ class Admin(commands.Cog):
             raise
 
     @commands.command()
-    @commands.check_any(commands.is_owner())
+    @commands.check_any(commands.is_owner(),
+                        commands.has_guild_permissions(administrator=True))
     async def tester(self, ctx):
-        await ctx.send(f"test", delete_after=10)
-
+        await ctx.send(f"test22", delete_after=10)
 
 
 # Called To Load Cog And Connect To Client

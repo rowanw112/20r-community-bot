@@ -13,7 +13,7 @@ class StartUp(commands.Cog):
             self.loopservervoicestatus.start()
             self.startupupdateembed.start()
             self.loopmembervoicestatus.start()
-            self.loopps2voicestatus.start()
+            # self.loopps2voicestatus.start()
         except:
             logging.exception("Got exception on main handler")
             raise
@@ -26,10 +26,10 @@ class StartUp(commands.Cog):
         """
         await self.client.wait_until_ready()
         server = {
-            "squad": [Squad(), "Squad"],
-            "mordhau": [Mordhau(), "Mordhau"],
-            "risingstorm": [RisingStorm(), "RisingStorm"],
-            "btw": [BTW(), "BTW"]
+            # "squad": [Squad(), "Squad"],
+            # "mordhau": [Mordhau(), "Mordhau"]
+            # "risingstorm": [RisingStorm(), "RisingStorm"],
+            # "btw": [BTW(), "BTW"]
         }
         for key, Server in server.items():
             target = Server[0]
@@ -48,10 +48,10 @@ class StartUp(commands.Cog):
         """
         await self.client.wait_until_ready()
         server = {
-            "squad": [Squad(), "Squad"],
-            "mordhau": [Mordhau(), "Mordhau"],
-            "risingstorm": [RisingStorm(), "RisingStorm"],
-            "btw": [BTW(), "BTW"]
+            # "squad": [Squad(), "Squad"],
+            # "mordhau": [Mordhau(), "Mordhau"]
+            # "risingstorm": [RisingStorm(), "RisingStorm"],
+            # "btw": [BTW(), "BTW"]
         }
         for key, Server in server.items():
             target = Server[0]
@@ -65,14 +65,19 @@ class StartUp(commands.Cog):
     async def startupupdateembed(self):
         await self.client.wait_until_ready()
         embedWhitelist = {
-            "verification": [Verification(), "Verification"],
             "member": [Member(), "Member"],
-            "public": [Public(), "Public"],
-            "casual": [Casual(), "Casual"],
-            "rules": [Rules(), "Rules"],
-            "welcome": [Welcome(), "Welcome"],
-            "application": [Application(), "Application"],
-            "comp": [Comp(), "Comp"]
+            # "casual": [Casual(), "Casual"],
+            # "application": [Application(), "Application"],
+            "strategy": [Strategy(), "Strategy"],
+            # "ps2": [PS2(), "PS2"],
+            "rl": [RL(), "RL"],
+            "commandrecruit": [CommandRecruit(), "CommandRecruit"],
+            "populargames": [PopularGames(), "PopularGames"],
+            "generalroles": [GeneralRoles(), "GeneralRoles"],
+            "discover20r": [Discover20r(), "Discover20r"],
+            #"welcome20r": [Welcome20r(), "Welcome20r"],
+            "region20r": [Region20r(), "Region20r"],
+            "member20r": [Member20r(), "Member20r"]
         }
         for key, Server in embedWhitelist.items():
             target = Server[0]
@@ -83,18 +88,21 @@ class StartUp(commands.Cog):
             await embedMessage.edit(embed=target.embedMessage)
             for reaction in target.Roles:
                 await embedMessage.add_reaction(discord.utils.get(embedMessage.guild.emojis, name=reaction))
+        logger.info(f"{embedWhitelist} embed has been updated")
 
-    @loop(minutes=5)
-    async def loopps2voicestatus(self):
-        """
-    Server background operation
-    Used for updating the voice channel of member count
-        """
-        await self.client.wait_until_ready()
-        voiceChannel = self.client.get_channel(753780062599381102)
-        population = emeraldPopulation()
-        await voiceChannel.edit(name=f"Emerald's Population: {population}")
-        logger.info("planetside status channel has been updated")
+
+
+    # @loop(minutes=5)
+    # async def loopps2voicestatus(self):
+    #     """
+    # Server background operation
+    # Used for updating the voice channel of member count
+    #     """
+    #     await self.client.wait_until_ready()
+    #     voiceChannel = self.client.get_channel(753780062599381102)
+    #     population = emeraldPopulation()
+    #     await voiceChannel.edit(name=f"Emerald's Population: {population}")
+    #     logger.info("planetside status channel has been updated")
 
     @loop(minutes=5)
     async def loopmembervoicestatus(self):

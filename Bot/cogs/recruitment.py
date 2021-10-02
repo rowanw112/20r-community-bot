@@ -13,14 +13,33 @@ logger = logging.getLogger(__name__)
 
 API_ENDPOINT = Bot.config['api20rkey']  # loads the 20r gsheets api key
 
-regionList = ["eu", "na", "me", "oce"]
-gamesList = ["mordhau", "ps2", "eft", "squad", "rl", "r6", "mb", "valorant", "minecraft", "cod",
-             "halo", "hll", "dnd", "rust", "amongus", "strategy", "wt", "btw"]
+regionList = ["eu", "na", "asia", "oce"]
+gamesList = ["mordhau", "ps2", "eft", "squad", "royals","rl", "r6", "mb", "valorant", "minecraft", "cod", "halo", "hll", "dnd",
+             "rust", "amongus", "strategy", "wt", "btw", "elite", "eve", "bf2", "lol", "sot", "squadrons", "outriders",
+             "warzone", "wow", "dayz", "destiny", "arma", "enlisted", "chiv", "foxhole"]
 
 
 class Recruitment(commands.Cog):
     def __init__(self, client):
         self.client = client
+
+    @commands.command(
+        name='games',
+        description='list of games that are supported for the .add command',
+        pass_contxt=True,
+    )
+    @commands.check_any(commands.is_owner(),
+                        commands.has_any_role(*Bot.addPermission),
+                        commands.has_guild_permissions(administrator=True))
+    async def games(self, ctx):
+        try:
+            await ctx.message.delete(delay=10)
+        except:
+            pass
+        embed = discord.Embed(colour=discord.Colour(8060672),
+                              title="Supported Games",
+                              description=f"**{', '.join(gamesList)}**")
+        await ctx.send(embed=embed)
 
     @commands.command(
         name='add',
@@ -30,7 +49,8 @@ class Recruitment(commands.Cog):
         usage='@discordid region game'
     )
     @commands.check_any(commands.is_owner(),
-                        commands.has_any_role(*Bot.addPermission))
+                        commands.has_any_role(*Bot.addPermission),
+                        commands.has_guild_permissions(administrator=True))
     async def add(self, ctx, member: discord.Member, region, *args):
         """
         Adds the user to the 20r spreadsheet, assigns them roles based on which game they were added to
@@ -83,7 +103,7 @@ class Recruitment(commands.Cog):
                     embed.set_thumbnail(url=member.avatar_url)
                     embed.set_author(name="Recruitment Form", icon_url=Bot.LOGO)
                     embed.set_footer(text="20r Gaming", icon_url=Bot.LOGO)
-                    await ctx.channel.send(embed=embed)
+                    await ctx.channel.send(f"{member.mention}", embed=embed)
             else:
                 await ctx.send("Please input the command correctly .add @discordid region game")
         else:
@@ -96,7 +116,8 @@ class Recruitment(commands.Cog):
         usage='@discordid region game'
     )
     @commands.check_any(commands.is_owner(),
-                        commands.has_any_role(*Bot.addPermission))
+                        commands.has_any_role(*Bot.addPermission),
+                        commands.has_guild_permissions(administrator=True))
     async def friend(self, ctx, member: discord.Member, region, *args):
         """
         assigns them friend role and the game that they were added on too
@@ -134,6 +155,15 @@ class Recruitment(commands.Cog):
         else:
             await ctx.send(f"please input a correct region {', '.join(regionList)}")
 
+    @commands.command(
+        name='delete',
+        description='to remove a user from the spreadsheet and to remove their roles.',
+        pass_contxt=True,
+        usage='@discordid region game'
+    )
+    @commands.check_any(commands.is_owner(),
+                        commands.has_any_role(*Bot.deletePermission),
+                        commands.has_guild_permissions(administrator=True))
     async def delete(self, ctx, member: discord.Member, *args):
         """
         Removes the user from the spreadsheet and purges their roles.
