@@ -68,7 +68,7 @@ class StartUp(commands.Cog):
             "member": [Member(), "Member"],
             # "casual": [Casual(), "Casual"],
             # "application": [Application(), "Application"],
-            "strategy": [Strategy(), "Strategy"],
+            "newworld": [Newworld(), "Newworld"],
             # "ps2": [PS2(), "PS2"],
             "rl": [RL(), "RL"],
             "commandrecruit": [CommandRecruit(), "CommandRecruit"],

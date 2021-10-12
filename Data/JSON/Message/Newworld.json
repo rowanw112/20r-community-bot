@@ -1,0 +1,27 @@
+{
+    "title": "**Welcome to the __New World__ Division**",
+    "description": "This division is the best place on Aeternum to congregate after being shipwrecked and without supplies, especially since you’ll need to make your way in a dangerous world where supernatural power has changed all the rules.",
+    "fields": [
+      {
+        "name": "**Division Rules**",
+        "value": "Follow the general code of conduct of 20R Gaming in this Division, aka the same rules apply here as in the rest of the community.\n\nFor the community rules **[check here](https://discord.com/channels/531243268256694313/776972330747297812/801574057392341053)**."
+      },
+      {
+        "name": "**EU Company Staff**",
+        "value": "```css\n[Leads]\n```<@140086715988574208>\n<@238669237273493507>\n<@60970772390215680>\n```ini\n[Assists]\n```<@158347970591457280>\n<@221934628645240833>\n```yaml\nInterim\n```<@854377209874350080>\n```fix\n[Paragons]\n```",
+        "inline": true
+      },
+      {
+        "name": "**NA Company Staff**",
+        "value": "```css\n[Leads]\n```<@279819161247678464>\n<@160883511299932160>\n```ini\n[Assists]\n```<@737421337580011551>\n<@468855673644646401>\n<@404718108406841357>\n```yaml\nInterim\n```<@163713565952442370>\n```fix\n[Paragons]\n```<@102478132497383424>\n<@316332958741168129>",
+        "inline": true
+      },
+      {
+        "name": "**React for Role**",
+        "value": "To get you situated into the correct company section, we have implemented a react for role system as the division is split into North American and European companies due to the amount of members.\n\n**All you need to do is react to:**\n<:EU:863946294711549973>  for the **EU Company** section.\n<:USCAD:795816734413160458>  for the **NA Company** section."
+      }
+    ],
+    "image": {
+      "url": "https://20r.gg/wp-content/uploads/2021/08/Official-NewWorld-Wallpaper-1-scaled.jpg"
+    }
+  }

@@ -11,7 +11,7 @@ API_ENDPOINT = Bot.config['api20rkey']  # loads the 20r gsheets api key
 
 regionList = ["eu", "na", "me", "oce"]
 gamesList = ["mordhau", "ps2", "eft", "squad", "rl", "r6", "mb", "valorant", "minecraft", "cod",
-             "halo", "hll", "dnd", "rust", "amongus", "strategy", "wt"]
+             "halo", "hll", "dnd", "rust", "amongus", "Newworld", "wt"]
 
 
 class ReactRoles(commands.Cog):
@@ -32,7 +32,7 @@ class ReactRoles(commands.Cog):
             "rules": [Rules(message), "Rules"],
             "welcome": [Welcome(message), "Welcome"],
             "application": [Application(message), "Application"],
-            "strategy": [Strategy(message), "Strategy"],
+            "newworld": [Newworld(message), "Newworld"],
             "comp": [Comp(message), "Comp"],
             "ps2": [PS2(message), "PS2"],
             "rl": [RL(message), "RL"],
@@ -171,11 +171,11 @@ class Application(Embed):
         super(Application, self).__init__(self.Name)
 
 
-class Strategy(Embed):
-    Name = "Strategy"
+class Newworld(Embed):
+    Name = "Newworld"
 
     def __init__(self, *argv, **kwargs):
-        super(Strategy, self).__init__(self.Name)
+        super(Newworld, self).__init__(self.Name)
 
 
 class Comp(Embed):

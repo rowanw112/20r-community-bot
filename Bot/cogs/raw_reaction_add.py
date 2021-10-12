@@ -55,8 +55,8 @@ class RawReactAdd(commands.Cog):
                 emojiRoles = Application().Roles.get(emoji)
                 for emojiReaction in emojiRoles:
                     await member.add_roles(member.guild.get_role(emojiReaction), atomic=True)
-            if reaction.message_id == Strategy().messageInfo:
-                emojiRoles = Strategy().Roles.get(emoji)
+            if reaction.message_id == Newworld().messageInfo:
+                emojiRoles = Newworld().Roles.get(emoji)
                 for emojiReaction in emojiRoles:
                     await member.add_roles(member.guild.get_role(emojiReaction), atomic=True)
             if reaction.message_id == Comp().messageInfo:
