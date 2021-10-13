@@ -16,7 +16,7 @@ API_ENDPOINT = Bot.config['api20rkey']  # loads the 20r gsheets api key
 regionList = ["eu", "na", "asia", "oce"]
 gamesList = ["mordhau", "ps2", "eft", "squad", "royals","rl", "r6", "mb", "valorant", "minecraft", "cod", "halo", "hll", "dnd",
              "rust", "amongus", "strategy", "wt", "btw", "elite", "eve", "bf2", "lol", "sot", "squadrons", "outriders",
-             "warzone", "wow", "dayz", "destiny", "arma", "enlisted", "chiv", "foxhole"]
+             "warzone", "wow", "dayz", "destiny", "arma", "enlisted", "chiv", "foxhole", "newworld"]
 
 
 class Recruitment(commands.Cog):

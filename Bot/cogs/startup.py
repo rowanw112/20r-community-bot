@@ -66,18 +66,19 @@ class StartUp(commands.Cog):
         await self.client.wait_until_ready()
         embedWhitelist = {
             "member": [Member(), "Member"],
-            # "casual": [Casual(), "Casual"],
+            "casual": [Casual(), "Casual"],
             # "application": [Application(), "Application"],
-            "newworld": [Newworld(), "Newworld"],
+            # "newworld": [Newworld(), "Newworld"], # with this disabled, it won't add new react for roles
             # "ps2": [PS2(), "PS2"],
-            "rl": [RL(), "RL"],
-            "commandrecruit": [CommandRecruit(), "CommandRecruit"],
+            # "rl": [RL(), "RL"],
+            # "commandrecruit": [CommandRecruit(), "CommandRecruit"],
             "populargames": [PopularGames(), "PopularGames"],
             "generalroles": [GeneralRoles(), "GeneralRoles"],
             "discover20r": [Discover20r(), "Discover20r"],
             #"welcome20r": [Welcome20r(), "Welcome20r"],
             "region20r": [Region20r(), "Region20r"],
-            "member20r": [Member20r(), "Member20r"]
+            "member20r": [Member20r(), "Member20r"],
+            "rules": [Rules(), "Rules"]
         }
         for key, Server in embedWhitelist.items():
             target = Server[0]
