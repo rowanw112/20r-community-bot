@@ -6,7 +6,7 @@ from discord.ext.commands import *
 from discord.ext.tasks import *
 
 from Bot.core.bot import Bot
-from Bot.core.database import *
+#from Bot.core.database import *
 
 logger = logging.getLogger(__name__)
 
@@ -15,43 +15,43 @@ class JoinMessage(commands.Cog):
 
     def __init__(self, client):
         self.client = client
-        self.db = DB("New User")
+        #self.db = DB("New User")
 
-    def create_table(self):
-        self.db.create_table("user",
-                             ("userid", "INTEGER PRIMARY KEY"),
-                             ("username", "TEXT"),
-                             ("displayname", "TEXT"),
-                             ("created", "NUMERIC"),
-                             ("joined", "NUMERIC"),
-                             ("guild", "INTEGER")
-                             )
+    # def create_table(self):
+    #     self.db.create_table("user",
+    #                          ("userid", "INTEGER PRIMARY KEY"),
+    #                          ("username", "TEXT"),
+    #                          ("displayname", "TEXT"),
+    #                          ("created", "NUMERIC"),
+    #                          ("joined", "NUMERIC"),
+    #                          ("guild", "INTEGER")
+    #                          )
 
-    @commands.command()
-    # @commands.check_any(commands.is_owner(),
-    #                     commands.has_any_role(*Bot.addPermission),
-    #                     commands.has_guild_permissions(administrator=True))
-    async def member(self, ctx):
-        self.create_table()
-        for member in ctx.guild.members:
-            self.db.insert_data("user",
-                                [(member.id,
-                                  str(member),
-                                  str(member.display_name),
-                                  member.created_at.strftime("%Y-%m-%d"),
-                                  member.joined_at.strftime("%Y-%m-%d"),
-                                  member.guild.id)])
+    # @commands.command()
+    # # @commands.check_any(commands.is_owner(),
+    # #                     commands.has_any_role(*Bot.addPermission),
+    # #                     commands.has_guild_permissions(administrator=True))
+    # async def member(self, ctx):
+    #     self.create_table()
+    #     for member in ctx.guild.members:
+    #         self.db.insert_data("user",
+    #                             [(member.id,
+    #                               str(member),
+    #                               str(member.display_name),
+    #                               member.created_at.strftime("%Y-%m-%d"),
+    #                               member.joined_at.strftime("%Y-%m-%d"),
+    #                               member.guild.id)])
 
     @commands.Cog.listener()
     async def on_member_join(self, member: discord.Member):
-        self.create_table()
-        self.db.insert_data("user",
-                            [(member.id,
-                              str(member),
-                              str(member.display_name),
-                              member.created_at.strftime("%Y-%m-%d"),
-                              member.joined_at.strftime("%Y-%m-%d"),
-                              member.guild.id)])
+        # self.create_table()
+        # self.db.insert_data("user",
+        #                     [(member.id,
+        #                       str(member),
+        #                       str(member.display_name),
+        #                       member.created_at.strftime("%Y-%m-%d"),
+        #                       member.joined_at.strftime("%Y-%m-%d"),
+        #                       member.guild.id)])
 
         try:
             with open(Bot.JSONDirectory + "/" + "Message" + "/" + "Privatewelcomemessage.json", 'r') as f:
