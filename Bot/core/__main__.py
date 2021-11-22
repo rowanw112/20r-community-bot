@@ -50,14 +50,11 @@ logging.getLogger("Discord")
 
 if Bot.config:
     try:
-        intents = discord.Intents.default()
-        intents.members = True
-        intents.presences = True
         client = Bot(
             command_prefix=(Bot.config["prefix"]),  # sets the prefix the commands for the bot
             case_insensitive=(Bot.config["case_insensitive"]),  # sets the case sensitivity for commands
             activity=discord.Game(name=Bot.config["activity"],
-                                  guild_subscriptions=True, intents=intents)  # sets the status of the bot
+                                  guild_subscriptions=True)  # sets the status of the bot
         )
         client.remove_command('help')
     except KeyError as missing_key:
