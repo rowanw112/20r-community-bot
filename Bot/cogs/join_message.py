@@ -52,15 +52,15 @@ class JoinMessage(commands.Cog):
         #                       member.created_at.strftime("%Y-%m-%d"),
         #                       member.joined_at.strftime("%Y-%m-%d"),
         #                       member.guild.id)])
-
+        print("testing")
         try:
-            with open(Bot.JSONDirectory + "/" + "Message" + "/" + "Privatewelcomemessage.json", 'r') as f:
-                JSON = json.load(f)
-                embed = discord.Embed.from_dict(JSON)
-            with open(Bot.JSONDirectory + "/" + "Roles" + "/" + "newuserRoles.json", 'r', encoding="utf-8") as f:
-                ID = json.load(f)
-                for data in ID:
-                    games = data["Switcher"]
+            # with open(Bot.JSONDirectory + "/" + "Message" + "/" + "Privatewelcomemessage.json", 'r') as f:
+            #     JSON = json.load(f)
+            #     embed = discord.Embed.from_dict(JSON)
+            # with open(Bot.JSONDirectory + "/" + "Roles" + "/" + "newuserRoles.json", 'r', encoding="utf-8") as f:
+            #     ID = json.load(f)
+            #     for data in ID:
+            #         games = data["Switcher"]
             channel = self.client.get_channel(589941950837293070)
             # if member.id != 617357306199408663:
             #     await member.send(embed=embed)
@@ -73,13 +73,14 @@ class JoinMessage(commands.Cog):
                 await member.add_roles(member.guild.get_role(roles), atomic=True)
             # if not member.activity or not member.activities:
             # await channel.send(f"{member.mention} has joined the server.")
-            if member.id != 617357306199408663 and member.guild.id == 531243268256694313:
+            if member.id != 707388740846354443 and member.guild.id == 531243268256694313:
                 embed = discord.Embed(colour=discord.Colour(8060672),
                                       description=f"{member.mention} has **__joined__** the server\n\nAccount was "
                                                   f"created at:\n" + member.created_at.strftime("%Y/%m/%d"),
                                       timestamp=member.joined_at)
                 embed.set_thumbnail(url=member.avatar_url)
                 embed.set_footer(text="Joined at", icon_url=Bot.LOGO)
+                print("test")
                 await channel.send(f"{member.mention}", embed=embed)
             else:
                 pass

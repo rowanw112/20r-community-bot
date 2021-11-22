@@ -1,6 +1,7 @@
 from discord.ext import commands
 from discord.ext.tasks import *
 from Bot.core.bot import Bot
+
 logger = logging.getLogger(__name__)
 
 
@@ -33,6 +34,8 @@ def setup(client):
     logging.info("LeaveMessage loaded!")
 
 
-# Called When Cog Is Unloaded
+1  # Called When Cog Is Unloaded
+
+
 def teardown():
     logging.info("SteamAPI unloaded!")

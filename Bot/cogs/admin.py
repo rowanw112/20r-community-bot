@@ -115,7 +115,7 @@ class Admin(commands.Cog):
     @commands.check_any(commands.is_owner(),
                         commands.has_guild_permissions(administrator=True))
     async def tester(self, ctx):
-        await ctx.send(f"test22", delete_after=10)
+        await ctx.send(f"test28", delete_after=10)
 
 
 # Called To Load Cog And Connect To Client
