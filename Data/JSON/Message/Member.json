@@ -5,12 +5,12 @@
       "fields": [
         {
           "name": "**Primary Division**",
-          "value": "<:Mordhau:638880354354069560> - Mordhau\n\n<:EFT:638891451043938304> - Escape From Tarkov\n\n<:Squad:638892257344225321> - Squad\n\n<:RL:638878864810180628> - Rocket League\n\n<:tabletop:851202569559867463> - TableTop\n\n<:rust:763080587267014726> - Rust\n\n<:wow:830871770659684452> - World of Warcraft\n\n<:D2:631722866228068352> - Destiny 2\n\n<:strategy:763088357282545734> - Strategy \n(HoI4, EU4, Stellaris etc)",
+          "value": "<:Mordhau:638880354354069560> - Mordhau\n\n<:EFT:638891451043938304> - Escape From Tarkov\n\n<:Squad:638892257344225321> - Squad\n\n<:RL:638878864810180628> - Rocket League\n\n<:tabletop:851202569559867463> - TableTop\n\n<:rust:763080587267014726> - Rust\n\n<:woweu:922588852978323509> - World of Warcraft (EUROPE)\n<:wowna:922588842006052904> - World of Warcraft (AMERICAS)\n\n<:D2:631722866228068352> - Destiny 2\n\n<:strategy:763088357282545734> - Strategy \n(HoI4, EU4, Stellaris etc)",
           "inline": true
         },
         {
           "name": "**Experimental Division**",
-          "value": "<:2042:853301235485769758> - Battlefield 2042\n\n<:battlebean:883888679381262336> - Bean Battles\n\n<:Party:892866504792637440> - Party Games\n\n<:newworldeu:904458436400545823> - New World (EUROPE)\n\n<:newworldna:904458423884730368> - New World (AMERICAS)\n\n<:gmod:906858680136384534> - Garry's Mod\n\n<:dauntless:899755900351442995> - Dauntless\n\n<:7D2D:908478008015355904> - 7 Days to Die\n\n<:HaloReach:650154329071943681> - Halo\n\n<:null:912752543401148476> - Programming and Development",
+          "value": "<:2042:853301235485769758> - Battlefield 2042\n\n<:battlebean:883888679381262336> - Bean Battles\n\n<:Party:892866504792637440> - Party Games\n\n<:newworldeu:904458436400545823> - New World (EUROPE)\n\n<:newworldna:904458423884730368> - New World (AMERICAS)\n\n<:gmod:906858680136384534> - Garry's Mod\n\n<:dauntless:899755900351442995> - Dauntless\n\n<:7D2D:908478008015355904> - 7 Days to Die\n\n<:HaloReach:650154329071943681> - Halo\n\n<:null:912752543401148476> - Programming and Development\n\n<:readyornot:922588831184748565> - Ready or Not",
           "inline": true
         },
         {
