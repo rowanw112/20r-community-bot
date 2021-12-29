@@ -21,7 +21,8 @@ class onMessage(commands.Cog):
         author = message.author
         donatorRoles = [591210327002054660, 701869901492650104, 591043526939377678, 795413904616062987,
                         794624216439586825, 591043464238465054, 794624212878491708, 794624205416431628,
-                        764625200565321738, 794624205416431628, 764625200565321738]
+                        764625200565321738, 794624205416431628, 764625200565321738, 591043464238465054,
+                        590910479841361972]
         # Donator roles Silver+ as well and esports
         if message.channel.id == 778094721394147338:  # venting void
             await message.delete() # auto delete any messages send into that channel
