@@ -197,45 +197,45 @@ class MemberMonth(commands.Cog):
             logging.exception("Got exception on main handler")
             raise
 
-        @commands.command()
-        @commands.check_any(commands.is_owner(),
-                            commands.has_guild_permissions(administrator=True))
-        async def esom(self, ctx, member: discord.Member, month=None):
-            try:
-                mydate = datetime.datetime.now()
-                if month is None:
-                    month = mydate.strftime("%B")
-                await ctx.message.delete()
-                embed = discord.Embed(title=f"**Experimental Staff of the Month**", colour=discord.Colour(850946),
-                                      description=f"Congratulations {member.mention} for being the Experimental Staff of the Month of {month.capitalize()}")
-                embed.set_thumbnail(url=Bot.LOGO)
-                embed.set_author(name="20r Gaming", icon_url=Bot.LOGO)
-                embed.set_footer(text="20r Gaming", icon_url=Bot.LOGO)
-                embed.set_image(url=member.avatar_url)
-                await ctx.channel.send(embed=embed)
-            except:
-                logging.exception("Got exception on main handler")
-                raise
+    @commands.command()
+    @commands.check_any(commands.is_owner(),
+                        commands.has_guild_permissions(administrator=True))
+    async def esom(self, ctx, member: discord.Member, month=None):
+        try:
+            mydate = datetime.datetime.now()
+            if month is None:
+                month = mydate.strftime("%B")
+            await ctx.message.delete()
+            embed = discord.Embed(title=f"**Experimental Staff of the Month**", colour=discord.Colour(850946),
+                                  description=f"Congratulations {member.mention} for being the Experimental Staff of the Month of {month.capitalize()}")
+            embed.set_thumbnail(url=Bot.LOGO)
+            embed.set_author(name="20r Gaming", icon_url=Bot.LOGO)
+            embed.set_footer(text="20r Gaming", icon_url=Bot.LOGO)
+            embed.set_image(url=member.avatar_url)
+            await ctx.channel.send(embed=embed)
+        except:
+            logging.exception("Got exception on main handler")
+            raise
 
-        @commands.command()
-        @commands.check_any(commands.is_owner(),
-                            commands.has_guild_permissions(administrator=True))
-        async def suom(self, ctx, member: discord.Member, month=None):
-            try:
-                mydate = datetime.datetime.now()
-                if month is None:
-                    month = mydate.strftime("%B")
-                await ctx.message.delete()
-                embed = discord.Embed(title=f"**Supporter of the Month**", colour=discord.Colour(850946),
-                                      description=f"Congratulations {member.mention} for being the Supporter of the Month of {month.capitalize()}")
-                embed.set_thumbnail(url=Bot.LOGO)
-                embed.set_author(name="20r Gaming", icon_url=Bot.LOGO)
-                embed.set_footer(text="20r Gaming", icon_url=Bot.LOGO)
-                embed.set_image(url=member.avatar_url)
-                await ctx.channel.send(embed=embed)
-            except:
-                logging.exception("Got exception on main handler")
-                raise
+    @commands.command()
+    @commands.check_any(commands.is_owner(),
+                        commands.has_guild_permissions(administrator=True))
+    async def suom(self, ctx, member: discord.Member, month=None):
+        try:
+            mydate = datetime.datetime.now()
+            if month is None:
+                month = mydate.strftime("%B")
+            await ctx.message.delete()
+            embed = discord.Embed(title=f"**Supporter of the Month**", colour=discord.Colour(850946),
+                                  description=f"Congratulations {member.mention} for being the Supporter of the Month of {month.capitalize()}")
+            embed.set_thumbnail(url=Bot.LOGO)
+            embed.set_author(name="20r Gaming", icon_url=Bot.LOGO)
+            embed.set_footer(text="20r Gaming", icon_url=Bot.LOGO)
+            embed.set_image(url=member.avatar_url)
+            await ctx.channel.send(embed=embed)
+        except:
+            logging.exception("Got exception on main handler")
+            raise
 
 
 # Called To Load Cog And Connect To Client
