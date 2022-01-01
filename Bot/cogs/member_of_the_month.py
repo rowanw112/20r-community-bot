@@ -116,7 +116,6 @@ class MemberMonth(commands.Cog):
             logging.exception("Got exception on main handler")
             raise
 
-
     @commands.command()
     @commands.check_any(commands.is_owner(),
                         commands.has_guild_permissions(administrator=True))
@@ -135,8 +134,9 @@ class MemberMonth(commands.Cog):
             try:
                 await member.edit(nick=str(member.display_name) + "🗝️")
             except discord.Forbidden as Error:
-                await ctx.author.send(f"Error occured while editing {member.display_name}, most likely their permissions is higher than "
-                                      "mine")
+                await ctx.author.send(
+                    f"Error occured while editing {member.display_name}, most likely their permissions is higher than "
+                    "mine")
                 pass
             await ctx.channel.send(embed=embed)
         except:
@@ -236,6 +236,7 @@ class MemberMonth(commands.Cog):
             except:
                 logging.exception("Got exception on main handler")
                 raise
+
 
 # Called To Load Cog And Connect To Client
 def setup(client):
