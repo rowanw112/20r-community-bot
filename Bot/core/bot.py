@@ -12,11 +12,10 @@ to maybe perhaps shed some light on what's exactly going on.
 import traceback
 import datetime
 import json
-import discord
 
-from discord import *
-from discord.ext import commands
 from datetime import *
+from nextcord import *
+from nextcord.ext import commands
 
 from Bot.core.config import *
 
@@ -29,7 +28,7 @@ class Bot(commands.AutoShardedBot):
     CogDirectory = config["CogDirectory"]
     LogDirectory = config["logpath"]
     GITRepo = config["GITRepo"]
-    LOGO = "https://cdn.discordapp.com/attachments/721427319381688320/758831668949418004/20r_Logo_2020.png"
+    LOGO = "https://cdn.discordapp.com/attachments/721427319381688320/758831668949418004/20r_Logo_2020.png" #20R logo link
     """ Loads all the permissions """
     with open(JSONDirectory + os.sep + "Roles" + os.sep + "permissionSwitcher.json", "r", encoding="utf-8") as f:
         JSON = json.load(f)

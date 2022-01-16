@@ -1,9 +1,9 @@
 import logging
 import json
-import discord
-from discord.ext import commands
-from discord.ext.commands import *
-from discord.ext.tasks import *
+import nextcord
+from nextcord.ext import commands
+from nextcord.ext.commands import *
+from nextcord.ext.tasks import *
 
 from Bot.core.bot import Bot
 #from Bot.core.database import *
@@ -43,7 +43,7 @@ class JoinMessage(commands.Cog):
     #                               member.guild.id)])
 
     @commands.Cog.listener()
-    async def on_member_join(self, member: discord.Member):
+    async def on_member_join(self, member: nextcord.Member):
         # self.create_table()
         # self.db.insert_data("user",
         #                     [(member.id,
@@ -56,7 +56,7 @@ class JoinMessage(commands.Cog):
         try:
             # with open(Bot.JSONDirectory + "/" + "Message" + "/" + "Privatewelcomemessage.json", 'r') as f:
             #     JSON = json.load(f)
-            #     embed = discord.Embed.from_dict(JSON)
+            #     embed = nextcord.Embed.from_dict(JSON)
             # with open(Bot.JSONDirectory + "/" + "Roles" + "/" + "newuserRoles.json", 'r', encoding="utf-8") as f:
             #     ID = json.load(f)
             #     for data in ID:
@@ -74,7 +74,7 @@ class JoinMessage(commands.Cog):
             # if not member.activity or not member.activities:
             # await channel.send(f"{member.mention} has joined the server.")
             if member.id != 707388740846354443 and member.guild.id == 531243268256694313:
-                embed = discord.Embed(colour=discord.Colour(8060672),
+                embed = nextcord.Embed(colour=nextcord.Colour(8060672),
                                       description=f"{member.mention} has **__joined__** the server\n\nAccount was "
                                                   f"created at:\n" + member.created_at.strftime("%Y/%m/%d"),
                                       timestamp=member.joined_at)
@@ -87,12 +87,12 @@ class JoinMessage(commands.Cog):
             # for activity in member.activities:
             #     if activity.type == 4:  # custom type (ignore)
             #         continue
-            #     if activity.type == discord.ActivityType.playing:
+            #     if activity.type == nextcord.ActivityType.playing:
             #         for game in games:
             #             if activity.name == game:
             #                 await member.add_roles(member.guild.get_role(game), atomic=True)
             #                 # await channel.send(f"{member.mention} has joined the server. They were playing **{activity.name}**.")
-            #                 embed = discord.Embed(colour=discord.Colour(8060672),
+            #                 embed = nextcord.Embed(colour=nextcord.Colour(8060672),
             #                                       description=f"{member.mention} has **__joined__** the "
             #                                                   f"server\n\nThey were "
             #                                                   f"playing:\n**{activity.name}**\nAccount was "

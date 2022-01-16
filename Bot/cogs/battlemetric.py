@@ -1,13 +1,12 @@
 import logging
 import json
-import discord
-from discord.ext import commands
-from discord.ext.commands import *
-from discord.ext.tasks import *
+import nextcord
+from nextcord.ext import commands
+from nextcord.ext.commands import *
+from nextcord.ext.tasks import *
 import sys
 import json
 import requests
-import discord
 import os
 
 from pprint import pprint
@@ -33,8 +32,8 @@ class SteamAPI(commands.Cog):
             await ctx.message.delete()
         except:
             pass
-        squadRole = discord.utils.get(ctx.guild.roles, name="Squad")
-        squadDRole = discord.utils.get(ctx.guild.roles, name="Squad Division")
+        squadRole = nextcord.utils.get(ctx.guild.roles, name="Squad")
+        squadDRole = nextcord.utils.get(ctx.guild.roles, name="Squad Division")
         embed = Squad().squadseedNotification
         await ctx.send(content=f"{squadRole.mention} {squadDRole.mention}", embed=embed)
 
@@ -57,9 +56,9 @@ class SteamAPI(commands.Cog):
             #"rust": Rust()
         }
         target = Game[game.lower()]
-        Role0 = discord.utils.get(ctx.guild.roles, name="Seed")
-        Role1 = discord.utils.get(ctx.guild.roles, name=rolename)
-        Role2 = discord.utils.get(ctx.guild.roles, name=f"{rolename} Division")
+        Role0 = nextcord.utils.get(ctx.guild.roles, name="Seed")
+        Role1 = nextcord.utils.get(ctx.guild.roles, name=rolename)
+        Role2 = nextcord.utils.get(ctx.guild.roles, name=f"{rolename} Division")
         embed = target.squadseedNotification
         if seedteam == None:
             await ctx.send(content=f"{Role1.mention} {Role2.mention}", embed=embed)
@@ -182,7 +181,7 @@ class Metric(object):
             logger.info(Error)
 
     def generateNotification(self, event_title: str, event_body: str, event_image: str):
-        embed = discord.Embed(title="20r Gaming Server",
+        embed = nextcord.Embed(title="20r Gaming Server",
                               description=f'Connect: steam://connect/{self.IP}:{self.queryPort}')
         embed.add_field(name=event_title,
                         value=event_body,
@@ -221,7 +220,7 @@ class Metric(object):
 
     @property
     def squadseedNotification(self):
-        embed = discord.Embed(title="20r Gaming Server",
+        embed = nextcord.Embed(title="20r Gaming Server",
                               description=f'Connect: steam://connect/{self.IP}:{self.queryPort}')
         embed.add_field(name="Server Seeding",
                         value=f"We current have **{self.currentPlayers}/{self.maxPlayers}** players"
@@ -261,7 +260,7 @@ class Metric(object):
 
     @property
     def Embed(self):
-        embed = discord.Embed(title="", colour=discord.Colour(4886754),
+        embed = nextcord.Embed(title="", colour=nextcord.Colour(4886754),
                               description=f'Click to Connect:\n steam://connect/{self.IP}:{self.queryPort}')
         try:
             embed.set_thumbnail(url=self.gameLogo)

@@ -1,10 +1,10 @@
 import logging
 import json
-import discord
+import nextcord
 import requests
-from discord.ext import commands
-from discord.ext.commands import *
-from discord.ext.tasks import *
+from nextcord.ext import commands
+from nextcord.ext.commands import *
+from nextcord.ext.tasks import *
 
 from Bot.core.bot import Bot
 from Bot.utils.updatepermissions import *
@@ -36,7 +36,7 @@ class Recruitment(commands.Cog):
             await ctx.message.delete(delay=10)
         except:
             pass
-        embed = discord.Embed(colour=discord.Colour(8060672),
+        embed = nextcord.Embed(colour=nextcord.Colour(8060672),
                               title="Supported Games",
                               description=f"**{', '.join(gamesList)}**")
         await ctx.send(embed=embed)
@@ -51,7 +51,7 @@ class Recruitment(commands.Cog):
     @commands.check_any(commands.is_owner(),
                         commands.has_any_role(*Bot.addPermission),
                         commands.has_guild_permissions(administrator=True))
-    async def add(self, ctx, member: discord.Member, region, *args):
+    async def add(self, ctx, member: nextcord.Member, region, *args):
         """
         Adds the user to the 20r spreadsheet, assigns them roles based on which game they were added to
         :param ctx:
@@ -98,7 +98,7 @@ class Recruitment(commands.Cog):
                         await removePermissions(ctx, member, "20rFriend")
                         await assignPermissions(ctx, member, "20rstartAdd")
                         await assignPermissions(ctx, member, region)  # assigning Region roles
-                    embed = discord.Embed(title=f"**{member.display_name}**", colour=discord.Colour(4886754),
+                    embed = nextcord.Embed(title=f"**{member.display_name}**", colour=nextcord.Colour(4886754),
                                           description=f'**Has been added to:**\n\n**{message}**\n\nRecruited by **{ctx.author.display_name}**')
                     embed.set_thumbnail(url=member.avatar_url)
                     embed.set_author(name="Recruitment Form", icon_url=Bot.LOGO)
@@ -118,7 +118,7 @@ class Recruitment(commands.Cog):
     @commands.check_any(commands.is_owner(),
                         commands.has_any_role(*Bot.addPermission),
                         commands.has_guild_permissions(administrator=True))
-    async def friend(self, ctx, member: discord.Member, region, *args):
+    async def friend(self, ctx, member: nextcord.Member, region, *args):
         """
         assigns them friend role and the game that they were added on too
         :param ctx:
@@ -164,7 +164,7 @@ class Recruitment(commands.Cog):
     @commands.check_any(commands.is_owner(),
                         commands.has_any_role(*Bot.deletePermission),
                         commands.has_guild_permissions(administrator=True))
-    async def delete(self, ctx, member: discord.Member, *args):
+    async def delete(self, ctx, member: nextcord.Member, *args):
         """
         Removes the user from the spreadsheet and purges their roles.
         :param ctx:

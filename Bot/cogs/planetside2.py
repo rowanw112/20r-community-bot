@@ -1,9 +1,11 @@
 import requests
-from discord.ext import commands
-from discord.ext.tasks import *
+from nextcord.ext import commands
+from nextcord.ext.tasks import *
 from Bot.utils.updatepermissions import *
 from Bot.core.bot import Bot
 from Bot.cogs.recruitment import *
+from Bot.core.bot import *
+
 
 logger = logging.getLogger(__name__)
 
@@ -23,7 +25,7 @@ class PlanetSide2(commands.Cog):
     @commands.check_any(commands.is_owner(),
                         commands.has_any_role(*Bot.addPermission, 730606807298343024),
                         commands.has_guild_permissions(administrator=True))
-    async def ps2add(self, ctx, member: discord.Member, *, cName):
+    async def ps2add(self, ctx, member: nextcord.Member, *, cName):
         """
         Adds the user to the spreadsheet, assigns them the correct ps2 role and recruit tag
         :param ctx:
@@ -54,7 +56,7 @@ class PlanetSide2(commands.Cog):
     @commands.check_any(commands.is_owner(),
                         commands.has_any_role(*Bot.addPermission, 730606807298343024),
                         commands.has_guild_permissions(administrator=True))
-    async def ps2friend(self, ctx, member: discord.Member):
+    async def ps2friend(self, ctx, member: nextcord.Member):
         """
         Assigns the friend role tags for players who don't want to join 20r as a member
         :param ctx:
@@ -70,7 +72,7 @@ class PlanetSide2(commands.Cog):
     @commands.check_any(commands.is_owner(),
                         commands.has_any_role(*Bot.addPermission, 730606807298343024),
                         commands.has_guild_permissions(administrator=True))
-    async def ps2delete(self, ctx, member: discord.Member, *, cName):
+    async def ps2delete(self, ctx, member: nextcord.Member, *, cName):
         """
         Removes users roles and from the ps2 spreadsheet
         :param ctx:

@@ -1,6 +1,7 @@
-from discord.ext import commands
-from discord.ext.tasks import *
-from Bot.core.bot import Bot
+import nextcord
+from nextcord.ext import commands
+from nextcord.ext.tasks import *
+from Bot.core.bot import *
 
 logger = logging.getLogger(__name__)
 
@@ -11,7 +12,7 @@ class LeaveMessage(commands.Cog):
         self.client = client
 
     @commands.Cog.listener()
-    async def on_member_remove(self, member: discord.Member):
+    async def on_member_remove(self, member: nextcord.Member):
         if member.id != 617357306199408663 and member.guild.id == 531243268256694313:
             try:
                 channel = self.client.get_channel(589941950837293070)

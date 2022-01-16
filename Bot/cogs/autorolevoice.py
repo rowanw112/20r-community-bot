@@ -5,7 +5,6 @@ from Bot.cogs.planetside2 import emeraldPopulation
 logger = logging.getLogger(__name__)
 
 
-
 class autorolevoice(commands.Cog):
     def __init__(self, client):
         try:
@@ -33,7 +32,6 @@ class autorolevoice(commands.Cog):
     #             await member.add_roles(member.guild.get_role(roles), atomic=True)
     #     else:
     #         pass
-
 
 
 # Called To Load Cog And Connect To Client

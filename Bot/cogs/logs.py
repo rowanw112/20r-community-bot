@@ -1,7 +1,6 @@
-from discord.ext import commands
-from discord.ext.tasks import *
-from Bot.core.bot import Bot
-from discord import File
+from Bot.core.bot import *
+
+import nextcord
 
 logger = logging.getLogger(__name__)
 
@@ -17,7 +16,7 @@ class Logs(commands.Cog):
     async def logs(self, ctx):
         with open(Bot.LogDirectory + "/bot.log", "rb") as f:
             await ctx.send("Log file")
-            await ctx.send(file=discord.File(f, "bot.log"))
+            await ctx.send(file=nextcord.File(f, "bot.log"))
 
 
 # Called To Load Cog And Connect To Client

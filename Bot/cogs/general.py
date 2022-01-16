@@ -1,3 +1,5 @@
+import nextcord
+
 from Bot.core.bot import *
 
 logger = logging.getLogger(__name__)
@@ -15,56 +17,56 @@ class General(commands.Cog):
     async def merch(self, ctx):
         with open(Bot.JSONDirectory + "/" + "Message" + "/" + "Merch.json", 'r') as f:
             JSON = json.load(f)
-            embed = discord.Embed.from_dict(JSON)
+            embed = nextcord.Embed.from_dict(JSON)
         await ctx.channel.send(embed=embed)
 
     @commands.command()
     async def help(self, ctx):
         with open(Bot.JSONDirectory + "/" + "Message" + "/" + "Help.json", 'r') as f:
             JSON = json.load(f)
-            embed = discord.Embed.from_dict(JSON)
+            embed = nextcord.Embed.from_dict(JSON)
         await ctx.channel.send(embed=embed)
 
     @commands.command()
     async def patreon(self, ctx):
         with open(Bot.JSONDirectory + "/" + "Message" + "/" + "Patreon.json", 'r') as f:
             JSON = json.load(f)
-            embed = discord.Embed.from_dict(JSON)
+            embed = nextcord.Embed.from_dict(JSON)
         await ctx.channel.send(embed=embed)
 
     @commands.command()
     async def donate(self, ctx):
         with open(Bot.JSONDirectory + "/" + "Message" + "/" + "Donate.json", 'r') as f:
             JSON = json.load(f)
-            embed = discord.Embed.from_dict(JSON)
+            embed = nextcord.Embed.from_dict(JSON)
         await ctx.channel.send(embed=embed)
 
     @commands.command()
     async def staff(self, ctx):
         with open(Bot.JSONDirectory + "/" + "Message" + "/" + "Staff.json", 'r') as f:
             JSON = json.load(f)
-            embed = discord.Embed.from_dict(JSON)
+            embed = nextcord.Embed.from_dict(JSON)
         await ctx.channel.send(embed=embed)
 
     @commands.command()
     async def social(self, ctx):
         with open(Bot.JSONDirectory + "/" + "Message" + "/" + "Socials.json", 'r') as f:
             JSON = json.load(f)
-            embed = discord.Embed.from_dict(JSON)
+            embed = nextcord.Embed.from_dict(JSON)
         await ctx.channel.send(embed=embed)
 
     @commands.command()
     async def staffapp(self, ctx):
         with open(Bot.JSONDirectory + "/" + "Message" + "/" + "Staffapp.json", 'r') as f:
             JSON = json.load(f)
-            embed = discord.Embed.from_dict(JSON)
+            embed = nextcord.Embed.from_dict(JSON)
         await ctx.channel.send(embed=embed)
 
     @commands.command()
     async def divapp(self, ctx):
         with open(Bot.JSONDirectory + "/" + "Message" + "/" + "Divapp.json", 'r') as f:
             JSON = json.load(f)
-            embed = discord.Embed.from_dict(JSON)
+            embed = nextcord.Embed.from_dict(JSON)
         await ctx.channel.send(embed=embed)
 
 # Called To Load Cog And Connect To Client

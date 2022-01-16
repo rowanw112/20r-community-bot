@@ -19,7 +19,7 @@ class RawReactRemove(commands.Cog):
         guild = await self.client.fetch_guild(reaction.guild_id)
         if guild is not None:
             member = await guild.fetch_member(reaction.user_id)
-        stranger = discord.utils.get(member.roles, id=int(588931614017323058))
+        stranger = nextcord.utils.get(member.roles, id=int(588931614017323058))
         if not member == self.client.user.id:  # Makes it so the bot ignores itself
             if reaction.message_id == Member().messageInfo:
                 if reaction.message_id == Member().messageInfo:

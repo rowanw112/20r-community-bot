@@ -1,9 +1,9 @@
 import logging
 import json
-import discord
-from discord.ext import commands
-from discord.ext.commands import *
-from discord.ext.tasks import *
+import nextcord
+from nextcord.ext import commands
+from nextcord.ext.commands import *
+from nextcord.ext.tasks import *
 
 from Bot.core.bot import Bot
 
@@ -32,12 +32,12 @@ class onMessage(commands.Cog):
             print(author.roles)
             if author != self.client.user:  # Makes it so the bot ignores itself
                 for donator in donatorRoles:
-                    Donator = discord.utils.get(author.roles, id=int(donator))
+                    Donator = nextcord.utils.get(author.roles, id=int(donator))
                     if Donator in author.roles:
                         donor = 1
                 if donor == 0:
                     await message.delete()
-                    embed = discord.Embed(title=f"**__Donators Only__**", colour=discord.Colour(4886754),
+                    embed = nextcord.Embed(title=f"**__Donators Only__**", colour=nextcord.Colour(4886754),
                                           description=f'Sorry {author.mention}\n'
                                                       f'This channel is authorised for <@&794624205416431628> and above\n'
                                                       f'If you are interested in promoting on our discord,\n'

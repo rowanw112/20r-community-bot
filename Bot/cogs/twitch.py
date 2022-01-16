@@ -27,7 +27,7 @@ class Twitch(commands.Cog):
             try:
                 with open(Bot.JSONDirectory + "/" + "streamers" + "/" + f"{name}.json", 'r') as f:
                     JSON = json.load(f)
-                    embed = discord.Embed.from_dict(JSON)
+                    embed = nextcord.Embed.from_dict(JSON)
                     await ctx.send(embed=embed)
             except:
                 await ctx.send("partnered twitch user does not exist")

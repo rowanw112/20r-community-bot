@@ -1,7 +1,9 @@
 import os
 
-from discord.ext import commands
-from discord.ext.tasks import *
+from Bot.core.bot import Bot
+import nextcord
+from nextcord.ext import commands
+from nextcord.ext.tasks import *
 
 from Bot.utils.updatepermissions import *
 
@@ -54,7 +56,7 @@ class ReactRoles(commands.Cog):
             _object = embedWhitelist[message][0]
             _object.updateMessageInfo(embedWhitelist[message.lower()][1], embeddedMessage)
             for reaction in target.Roles:
-                await embeddedMessage.add_reaction(discord.utils.get(ctx.guild.emojis, name=reaction))
+                await embeddedMessage.add_reaction(nextcord.utils.get(ctx.guild.emojis, name=reaction))
         except KeyError:
             await ctx.send("The embedded message does not exist")
 
@@ -107,7 +109,7 @@ class Embed(object):
 
     @property
     def embedMessage(self):
-        return discord.Embed.from_dict(self.embed)
+        return nextcord.Embed.from_dict(self.embed)
 
     @property
     def Roles(self):

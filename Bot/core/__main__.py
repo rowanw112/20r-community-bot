@@ -7,9 +7,10 @@ import time
 from logging.handlers import TimedRotatingFileHandler
 from pathlib import Path
 
-import discord
+import nextcord
+from nextcord.ext import commands
 import git
-from discord.ext import commands
+
 
 __depth__ = 2
 
@@ -53,8 +54,7 @@ if Bot.config:
         client = Bot(
             command_prefix=(Bot.config["prefix"]),  # sets the prefix the commands for the bot
             case_insensitive=(Bot.config["case_insensitive"]),  # sets the case sensitivity for commands
-            activity=discord.Game(name=Bot.config["activity"],
-                                  guild_subscriptions=True)  # sets the status of the bot
+            activity=nextcord.Game(name=Bot.config["activity"])  # sets the status of the bot
         )
         client.remove_command('help')
     except KeyError as missing_key:

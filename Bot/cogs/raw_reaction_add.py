@@ -10,7 +10,7 @@ class RawReactAdd(commands.Cog):
     @commands.Cog.listener()
     async def on_raw_reaction_add(self, reaction):
         member = reaction.member
-        stranger = discord.utils.get(member.roles, id=int(588931614017323058))
+        stranger = nextcord.utils.get(member.roles, id=int(588931614017323058))
         try:
             emoji = str(reaction.emoji)
             emoji = emoji.split(":", 2)

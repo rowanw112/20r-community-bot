@@ -6,12 +6,13 @@
 Usage: Virtualize.py
 """
 
-import os
-import sys
 import ctypes
-import time
-import threading
+import os
 import subprocess
+import sys
+import threading
+import time
+
 
 class STDOUT(object):
     """ Color (object)

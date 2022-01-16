@@ -20,7 +20,7 @@ class voicechat(commands.Cog):
         if after.channel.id == Voicechannel:  # if it's twitch voice channel
             with open(Bot.JSONDirectory + "/" + "Message" + "/" + "TwitchPM.json", 'r') as f:
                 JSON = json.load(f)
-                embed = discord.Embed.from_dict(JSON)
+                embed = nextcord.Embed.from_dict(JSON)
             await member.send(embed=embed)
         else:
             pass

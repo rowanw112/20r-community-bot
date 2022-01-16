@@ -1,9 +1,9 @@
 import logging
 import json
-import discord
-from discord.ext import commands
-from discord.ext.commands import *
-from discord.ext.tasks import *
+import nextcord
+from nextcord.ext import commands
+from nextcord.ext.commands import *
+from nextcord.ext.tasks import *
 
 from Bot.core.bot import Bot
 
@@ -28,7 +28,7 @@ class AmongUs(commands.Cog):
                     roomLimit = ctx.author.voice.channel.user_limit
                     if roomLimit == 0 or roomLimit >= 11:
                         roomLimit = 10
-                    embed = discord.Embed(colour=discord.Colour(0x2DC7FF), description=
+                    embed = nextcord.Embed(colour=nextcord.Colour(0x2DC7FF), description=
                     f"[:arrow_right: **Click to join the voice channel!** :arrow_left:]({roomLink})\nIf you want to "
                     f"make your own party, join a voice channel and type \n **!invite *code* *region***",
                                           timestamp=ctx.message.created_at)

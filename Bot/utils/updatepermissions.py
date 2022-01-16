@@ -50,15 +50,15 @@ async def removePermissions(ctx, member, permissionString):
             await member.remove_roles(ctx.guild.get_role(permissionUnit), atomic=True)
 
 
-async def purgePermissions(ctx, member):
-    """
-    function of removing all roles from the user beside the ones that are excluded,
-    assigns stranger role to them once been purged.
-    :param ctx:
-    :param member:
-    """
-    for role in member.roles:
-        if role.id in Bot.permissionwhiteList:
-            continue
-        await member.remove_roles(ctx.guild.get_role(role.id), atomic=True)
-    await assignPermissions(ctx, member, "20rStranger")
+# async def purgePermissions(ctx, member):
+#     """
+#     function of removing all roles from the user beside the ones that are excluded,
+#     assigns stranger role to them once been purged.
+#     :param ctx:
+#     :param member:
+#     """
+#     for role in member.roles:
+#         if role.id in Bot.permissionwhiteList:
+#             continue
+#         await member.remove_roles(ctx.guild.get_role(role.id), atomic=True)
+#     await assignPermissions(ctx, member, "20rStranger")

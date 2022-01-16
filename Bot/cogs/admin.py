@@ -1,4 +1,10 @@
+import nextcord
+
 from Bot.core.bot import *
+
+
+from nextcord.utils import *
+
 
 logger = logging.getLogger(__name__)
 
@@ -38,8 +44,8 @@ class Admin(commands.Cog):
     async def updateroles(self, ctx, oldrole, newrole):
         oldroleid = oldrole.replace("<", "").replace(">", "").replace("@", "").replace("&", "")
         newroleid = newrole.replace("<", "").replace(">", "").replace("@", "").replace("&", "")
-        Oldrole = discord.utils.get(ctx.guild.roles, id=int(oldroleid))
-        Newrole = discord.utils.get(ctx.guild.roles, id=int(newroleid))
+        Oldrole = nextcord.utils.get(ctx.guild.roles, id=int(oldroleid))
+        Newrole = nextcord.utils.get(ctx.guild.roles, id=int(newroleid))
         try:
             await ctx.message.delete(delay=10)
         except:
@@ -61,7 +67,7 @@ class Admin(commands.Cog):
                         commands.has_guild_permissions(administrator=True))
     async def userroles(self, ctx, role):
         oldroleid = role.replace("<", "").replace(">", "").replace("@", "").replace("&", "")
-        Oldrole = discord.utils.get(ctx.guild.roles, id=int(oldroleid))
+        Oldrole = nextcord.utils.get(ctx.guild.roles, id=int(oldroleid))
         try:
             await ctx.message.delete(delay=10)
         except:
@@ -80,7 +86,7 @@ class Admin(commands.Cog):
     @commands.command()
     @commands.check_any(commands.is_owner(),
                         commands.has_guild_permissions(administrator=True))
-    async def created(self, ctx, member: discord.Member):
+    async def created(self, ctx, member: nextcord.Member):
         try:
             await ctx.message.delete(delay=10)
         except:
@@ -96,7 +102,7 @@ class Admin(commands.Cog):
     @commands.check_any(commands.is_owner(),
                         commands.has_guild_permissions(administrator=True))
     async def changename(self, ctx):
-        role = discord.utils.get(ctx.guild.roles, id=588816938202038292)
+        role = nextcord.utils.get(ctx.guild.roles, id=588816938202038292)
         try:
             await ctx.message.delete(delay=10)
         except:
