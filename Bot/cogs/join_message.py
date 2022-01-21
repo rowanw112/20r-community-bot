@@ -78,7 +78,7 @@ class JoinMessage(commands.Cog):
                                       description=f"{member.mention} has **__joined__** the server\n\nAccount was "
                                                   f"created at:\n" + member.created_at.strftime("%Y/%m/%d"),
                                       timestamp=member.joined_at)
-                embed.set_thumbnail(url=member.avatar_url)
+                embed.set_thumbnail(url=member.display_avatar.url)
                 embed.set_footer(text="Joined at", icon_url=Bot.LOGO)
                 print("test")
                 await channel.send(f"{member.mention}", embed=embed)

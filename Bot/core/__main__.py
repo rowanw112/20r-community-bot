@@ -47,15 +47,15 @@ consoleHandler.setFormatter(logFormatter)
 logger.addHandler(consoleHandler)
 logging.getLogger("Discord")
 ############################
-
+intents = nextcord.Intents().all()
 
 if Bot.config:
     try:
         client = Bot(
             command_prefix=(Bot.config["prefix"]),  # sets the prefix the commands for the bot
             case_insensitive=(Bot.config["case_insensitive"]),  # sets the case sensitivity for commands
-            activity=nextcord.Game(name=Bot.config["activity"])  # sets the status of the bot
-        )
+            activity=nextcord.Game(name=Bot.config["activity"]), # sets the status of the bot
+            intents=intents)
         client.remove_command('help')
     except KeyError as missing_key:
         logger.critical(f"There is no config item {missing_key}. You have likely modified a key name in bot.yml,"

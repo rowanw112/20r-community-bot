@@ -13,7 +13,8 @@ class LeaveMessage(commands.Cog):
 
     @commands.Cog.listener()
     async def on_member_remove(self, member: nextcord.Member):
-        if member.id != 617357306199408663 and member.guild.id == 531243268256694313:
+        print("test")
+        if member.id != 707388740846354443 and member.guild.id == 531243268256694313:
             try:
                 channel = self.client.get_channel(589941950837293070)
                 # embed = discord.Embed(colour=discord.Colour(16711680),
