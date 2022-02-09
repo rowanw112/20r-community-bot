@@ -1,6 +1,9 @@
 from Bot.cogs.battlemetric import *
 from Bot.cogs.reactroles import *
 
+
+from Bot.core.bot import Bot
+
 logger = logging.getLogger(__name__)
 
 
@@ -22,7 +25,7 @@ class MemberMonth(commands.Cog):
             embed.set_thumbnail(url=Bot.LOGO)
             embed.set_author(name="20r Gaming", icon_url=Bot.LOGO)
             embed.set_footer(text="20r Gaming", icon_url=Bot.LOGO)
-            embed.set_image(url=member.avatar_url)
+            embed.set_image(url=member.display_avatar.url)
             try:
                 await member.edit(nick=str(member.display_name) + "🥇️")
             except nextcord.Forbidden as Error:
@@ -49,7 +52,7 @@ class MemberMonth(commands.Cog):
             embed.set_thumbnail(url=Bot.LOGO)
             embed.set_author(name="20r Gaming", icon_url=Bot.LOGO)
             embed.set_footer(text="20r Gaming", icon_url=Bot.LOGO)
-            embed.set_image(url=member.avatar_url)
+            embed.set_image(url=member.display_avatar.url)
             try:
                 await member.edit(nick=str(member.display_name) + "💲")
             except nextcord.Forbidden as Error:
@@ -76,7 +79,7 @@ class MemberMonth(commands.Cog):
             embed.set_thumbnail(url=Bot.LOGO)
             embed.set_author(name="20r Gaming", icon_url=Bot.LOGO)
             embed.set_footer(text="20r Gaming", icon_url=Bot.LOGO)
-            embed.set_image(url=member.avatar_url)
+            embed.set_image(url=member.display_avatar.url)
             try:
                 await member.edit(nick=str(member.display_name) + "🏆️")
             except nextcord.Forbidden as Error:
@@ -103,7 +106,7 @@ class MemberMonth(commands.Cog):
             embed.set_thumbnail(url=Bot.LOGO)
             embed.set_author(name="20r Gaming", icon_url=Bot.LOGO)
             embed.set_footer(text="20r Gaming", icon_url=Bot.LOGO)
-            embed.set_image(url=member.avatar_url)
+            embed.set_image(url=member.display_avatar.url)
             try:
                 await member.edit(nick=str(member.display_name) + "🏅️")
             except nextcord.Forbidden as Error:
@@ -130,7 +133,7 @@ class MemberMonth(commands.Cog):
             embed.set_thumbnail(url=Bot.LOGO)
             embed.set_author(name="20r Gaming", icon_url=Bot.LOGO)
             embed.set_footer(text="20r Gaming", icon_url=Bot.LOGO)
-            embed.set_image(url=member.avatar_url)
+            embed.set_image(url=member.display_avatar.url)
             try:
                 await member.edit(nick=str(member.display_name) + "🗝️")
             except nextcord.Forbidden as Error:
@@ -157,7 +160,7 @@ class MemberMonth(commands.Cog):
             embed.set_thumbnail(url=Bot.LOGO)
             embed.set_author(name="20r Gaming", icon_url=Bot.LOGO)
             embed.set_footer(text="20r Gaming", icon_url=Bot.LOGO)
-            embed.set_image(url=member.avatar_url)
+            embed.set_image(url=member.display_avatar.url)
             try:
                 await member.edit(nick=str(member.display_name) + "🔑️")
             except nextcord.Forbidden as Error:
@@ -184,7 +187,7 @@ class MemberMonth(commands.Cog):
             embed.set_thumbnail(url=Bot.LOGO)
             embed.set_author(name="20r Gaming", icon_url=Bot.LOGO)
             embed.set_footer(text="20r Gaming", icon_url=Bot.LOGO)
-            embed.set_image(url=member.avatar_url)
+            embed.set_image(url=member.display_avatar.url)
             try:
                 await member.edit(nick=str(member.display_name) + "💯")
             except nextcord.Forbidden as Error:
@@ -211,7 +214,7 @@ class MemberMonth(commands.Cog):
             embed.set_thumbnail(url=Bot.LOGO)
             embed.set_author(name="20r Gaming", icon_url=Bot.LOGO)
             embed.set_footer(text="20r Gaming", icon_url=Bot.LOGO)
-            embed.set_image(url=member.avatar_url)
+            embed.set_image(url=member.display_avatar.url)
             await ctx.channel.send(embed=embed)
         except:
             logging.exception("Got exception on main handler")
@@ -231,7 +234,7 @@ class MemberMonth(commands.Cog):
             embed.set_thumbnail(url=Bot.LOGO)
             embed.set_author(name="20r Gaming", icon_url=Bot.LOGO)
             embed.set_footer(text="20r Gaming", icon_url=Bot.LOGO)
-            embed.set_image(url=member.avatar_url)
+            embed.set_image(url=member.display_avatar.url)
             await ctx.channel.send(embed=embed)
         except:
             logging.exception("Got exception on main handler")
