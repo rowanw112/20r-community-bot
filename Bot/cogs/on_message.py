@@ -22,7 +22,12 @@ class onMessage(commands.Cog):
         donatorRoles = [591210327002054660, 701869901492650104, 591043526939377678, 795413904616062987,
                         794624216439586825, 591043464238465054, 794624212878491708, 794624205416431628,
                         764625200565321738, 794624205416431628, 764625200565321738, 591043464238465054,
-                        590910479841361972]
+                        590910479841361972, 995780751423455272, 590910479841361972, 591043464238465054,
+
+                        622594532793516072, 531857509103697920, 531857333664481280, 611442318305787914,
+                        605857237407236097, 638638610517590017, 683437039504326771,
+
+                        857668447034277919, 591210327002054660, 701869901492650104, 591043526939377678]
         # Donator roles Silver+ as well and esports
         if message.channel.id == 778094721394147338:  # venting void
             await message.delete() # auto delete any messages send into that channel
@@ -39,11 +44,9 @@ class onMessage(commands.Cog):
                     await message.delete()
                     embed = nextcord.Embed(title=f"**__Donators Only__**", colour=nextcord.Colour(4886754),
                                           description=f'Sorry {author.mention}\n'
-                                                      f'This channel is authorised for <@&794624205416431628> and above\n'
+                                                      f'This channel is authorised for <@&995780751423455272> and above\n'
                                                       f'If you are interested in promoting on our discord,\n'
-                                                      f'please donate at our [Patreon](https://www.patreon.com/20r).\n'
-                                                      f'**Our Patreon:**\n'
-                                                      f'https://www.patreon.com/20r')
+                                                      f'please donate to our discord in <#590809040284680223>.\n')
                     embed.set_thumbnail(url=Bot.LOGO)
                     await message.channel.send(f"{author.mention}", embed=embed, delete_after=20)
 
