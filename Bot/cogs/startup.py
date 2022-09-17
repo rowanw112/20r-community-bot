@@ -74,13 +74,13 @@ class StartUp(commands.Cog):
             # "ps2": [PS2(), "PS2"],
             # "rl": [RL(), "RL"],
             # "commandrecruit": [CommandRecruit(), "CommandRecruit"],
-            "populargames": [PopularGames(), "PopularGames"],
+            # "populargames": [PopularGames(), "PopularGames"],
             "generalroles": [GeneralRoles(), "GeneralRoles"],
             "discover20r": [Discover20r(), "Discover20r"],
             #"welcome20r": [Welcome20r(), "Welcome20r"],
             "region20r": [Region20r(), "Region20r"],
-            "member20r": [Member20r(), "Member20r"],
-            "rules": [Rules(), "Rules"]
+            "member20r": [Member20r(), "Member20r"]
+            # "rules": [Rules(), "Rules"]
         }
         for key, Server in embedWhitelist.items():
             target = Server[0]
