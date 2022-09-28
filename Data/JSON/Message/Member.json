@@ -5,12 +5,12 @@
       "fields": [
         {
           "name": "**Primary Division**",
-          "value": "<:Mordhau:638880354354069560> - Mordhau\n\n<:EFT:638891451043938304> - Escape From Tarkov\n\n<:Squad:638892257344225321> - Squad\n\n<:RL:638878864810180628> - Rocket League\n\n<:tabletop:851202569559867463> - TableTop\n\n<:rust:763080587267014726> - Rust\n\n<:wow:830871770659684452> - World of Warcraft (EUROPE)\n\n<:strategy:763088357282545734> - Strategy \n(HoI4, EU4, Stellaris etc)\n\n<:Party:892866504792637440> - Party Games\n\n<:7D2D:908478008015355904> - 7 Days to Die\n\n<:Halo:937816328054644786> - Halo",
+          "value": "<:EFT:638891451043938304> - Escape From Tarkov\n\n<:Squad:638892257344225321> - Squad\n\n<:RL:638878864810180628> - Rocket League\n\n<:rust:763080587267014726> - Rust\n\n<:wow:830871770659684452> - World of Warcraft (EUROPE)\n\n<:strategy:763088357282545734> - Strategy \n(HoI4, EU4, Stellaris etc)",
           "inline": true
         },
         {
           "name": "**Experimental Division**",
-          "value": "<:dayz:947959810240970842> - DayZ\n\n<:MB:715633824892977203> - M&B: Bannerlord\n\n<:WT:718142927594979409> - War Thunder\n\n<:starcitizen:1002267406405746718> - Star Citizen\n\n<:CSGO:685672825448955980> - CSGO\n\n<:riotmmo:1020082413315047424> - Riot MMO\n\n<:cod:743518435606265917> - Call of Duty\n\n<:tf2:1023943139196665967> - Team fortress 2",
+          "value": "<:dayz:947959810240970842> - DayZ\n\n<:MB:715633824892977203> - M&B: Bannerlord\n\n<:WT:718142927594979409> - War Thunder\n\n<:starcitizen:1002267406405746718> - Star Citizen\n\n<:CSGO:685672825448955980> - CSGO\n\n<:riotmmo:1020082413315047424> - Riot MMO\n\n<:cod:743518435606265917> - Call of Duty\n\n<:tf2:1023943139196665967> - Team fortress 2\n\n<:Party:892866504792637440> - Party Games\n\n<:7D2D:908478008015355904> - 7 Days to Die\n\n<:ow:1024735646935421039> - Overwatch",
           "inline": true
         },
         {
