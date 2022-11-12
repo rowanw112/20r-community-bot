@@ -67,7 +67,7 @@ class StartUp(commands.Cog):
     async def startupupdateembed(self):
         await self.client.wait_until_ready()
         embedWhitelist = {
-            "member": [Member(), "Member"],
+            # "member": [Member(), "Member"],
             "casual": [Casual(), "Casual"],
             # "application": [Application(), "Application"],
             # "newworld": [Newworld(), "Newworld"], # with this disabled, it won't add new react for roles
@@ -75,8 +75,8 @@ class StartUp(commands.Cog):
             # "rl": [RL(), "RL"],
             # "commandrecruit": [CommandRecruit(), "CommandRecruit"],
             # "populargames": [PopularGames(), "PopularGames"],
-            "generalroles": [GeneralRoles(), "GeneralRoles"],
-            "discover20r": [Discover20r(), "Discover20r"],
+            # "generalroles": [GeneralRoles(), "GeneralRoles"],
+            # "discover20r": [Discover20r(), "Discover20r"],
             #"welcome20r": [Welcome20r(), "Welcome20r"],
             "region20r": [Region20r(), "Region20r"],
             "member20r": [Member20r(), "Member20r"]
