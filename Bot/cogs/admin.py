@@ -56,7 +56,7 @@ class Admin(commands.Cog):
             for member in ctx.guild.members:
                 if Oldrole in member.roles:
                     await member.add_roles(member.guild.get_role(int(newroleid)), atomic=True)
-                    await member.remove_roles(member.guild.get_role(int(oldroleid)), atomic=True)
+                    #await member.remove_roles(member.guild.get_role(int(oldroleid)), atomic=True)
         except:
             logging.exception("Got exception on main handler")
             raise
